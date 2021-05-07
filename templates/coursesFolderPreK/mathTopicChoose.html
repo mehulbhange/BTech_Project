@@ -1,0 +1,153 @@
+{% extends "base_page.html" %}
+{%block title%} topicSelection {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/courseSelection/coursesinfoPrek.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/textDecoration/textDecor.css')}}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{%endblock head%}
+
+{%block content %}
+<br>
+<div class="container">
+    <div id="accordion" class="accordion">
+        <div class="card mb-0">
+            <div class="card-header collapsed grabbing" style="background-color: black;" data-toggle="collapse"
+                href="#collapseOne">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>Introduction to Numbers</bold>
+                </a>
+            </div>
+            <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                <p>Counting is the process of determining the numbers of items/elements/objects.
+                </p>
+                <p>In this module we are going to learns numbers upto 10</p>
+                <p>Learning the numbers by shapes,objects actual number representation.</p>
+                <p>
+                <ul>
+                    <li>1. Learn to count upto 5</li>
+                    <li>2. Count objects/shapes</li>
+                    <li>3. Learn to count upto 10</li>
+                    <li>4. Count objects/shapes</li>
+                    <li>5. Representation of numbers i.e 1 2 3 4 5 6 7 8 9 10 etc</li>
+                    <li>6. Counting and write ans.in number representation.</li>
+                </ul>
+                </p>
+                <!-- <button type="button" class="btn btn-outline-primary" onclick="location.href='">Start Learning</button> -->
+                <!-- <a href="{{url_for('chooseMath')}}" class="mt-auto btn btn-primary effect-shine ">Start Learning</a> -->
+                <a href="{{url_for('IntroNumbers')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+            <br>
+            <div class="card-header collapsed grabbing " style="background-color: black;" data-toggle="collapse"
+                data-parent="#accordion" href="#collapseTwo">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>Comparision</bold>
+                </a>
+            </div>
+            <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                <p>Learning to compare quantities helps preschoolers begin to make sense of the relationships between
+                    numbers.for example – seven is one less than eighth but it is
+                    one more than six so your child will build all these relationships in kinder garden addition and
+                    substractions.
+                </p>
+                <p>
+                <ul>
+                    <li>1. More and Few</li>
+                    <li>2. Fewer and more compare by countimg</li>
+                    <li>3. Comparing mixed group </li>
+                    <li>4. Long and Short</li>
+                </ul>
+                </p>
+                <a href="{{url_for('femo1')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+
+            <br>
+            <div class="card-header collapsed grabbing" style="background-color: black;" data-toggle="collapse"
+                href="#collapse5">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>Geometry(Shapes and Sizes)</bold>
+                </a>
+            </div>
+            <div id="collapse5" class="card-body collapse" data-parent="#accordion">
+                <p>This module is about learning the shape of an object/figure.
+                </p>
+                <p>A shape is the form of an object or its external outline,
+                    as opposed to other properties such as colour,texture or material type.</p>
+                <p>There are 2-D and 3-D shapes.2-D shapes are for e.g Triangle,circle,square etc.</p>
+                <p>
+                <ul>
+                    <li>1. Name of Shape</li>
+                    <li>2. Circle</li>
+                    <li>3. Squares</li>
+                    <li>4. Triangles</li>
+                    <li>5. Rectangle</li>
+                </ul>
+                </p>
+                <a href="{{url_for('shapename')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+
+            <br>
+            <div class="card-header collapsed grabbing" style="background-color: black;" data-toggle="collapse"
+                href="#collapse6">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>Positions</bold>
+                </a>
+            </div>
+            <div id="collapse6" class="card-body collapse" data-parent="#accordion">
+                <p>This module is going to teach the positions relative to other one .it is also a kind of arithmetic
+                    which will kid learns by visualizing a objects and positions of object.
+                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.
+                </p>
+                <p>
+                <ul>
+                    <li>Left-Right</li>
+                </ul>
+                </p>
+                <a href="{{url_for('leftright')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+
+            <br>
+            <div class="card-header collapsed grabbing" style="background-color: black;" data-toggle="collapse"
+                href="#collapse7">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>Introduction to Coins</bold>
+                </a>
+            </div>
+            <div id="collapse7" class="card-body collapse" data-parent="#accordion">
+                <p>Talking to your kids about money at an early age can help them understand the value of the rupee,how
+                    to save for long term goals and how to spend responsibly.here introduction to coins for kids is the
+                    financial literacy to kids.it will help them in day to day life .
+                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                    accusamus labore sustainable VHS.
+                </p>
+                <p>
+                <ul>
+                    <li>Introduction to Indian Currency </li>
+                </ul>
+                </p>
+                <a href="coins" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock content%}
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+{%endblock scripts%}

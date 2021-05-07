@@ -1,0 +1,144 @@
+{% extends "base_page.html" %}
+{%block title%} communityHelp {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>General Knowledge</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>GK</p>
+            <li>
+                <a onclick="return onClickOpen(34, 2.8, 'grade_1');" href="{{url_for('community')}}">Comunity Helpers</a>
+            </li>
+            
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Comunity Helpers</h2>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe src="https://drive.google.com/file/d/1Sg1Wnv7ZFCTaOoiHZlkm1pLxafKcwv1G/preview" width="100%" height="330" allowfullscreen='true'></iframe>
+            <h4>Community Helpers</h4>
+            <p>Community helpers are the individuals who live and work in our community and ensure that the community stays healthy, safe and happy. These community helpers do everything they can to help us and make our lives easier by providing us with goods and services.</p>
+            <p>Doctors, nurses, firemen, policemen, postmen, drivers, dentists, farmers, plumbers, librarians, mechanic, chef, fishermen, as well as teachers form a part of community helpers.</p>
+            <h5>To help children understand the concept of community helpers in a better way, the following activities can be undertaken with children:</h5>
+            <p>Pick a community helper topic for the day and help children identify and learn all the tools that this particular community helper works with.</p>
+            <p>The parents or preschool teacher can make sock puppets of community helpers and act out a puppet show depicting how community helpers work.</p>
+            <p>Take picture prints of community helpers from the web and ask children to colour these pictures.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Not Available
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Different websites for courses</li>
+                    <li>www.shantijuniors.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled" >
+                        <a class="page-link"  tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('community')}}">1</a></li>
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('community')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

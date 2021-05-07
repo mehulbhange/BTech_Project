@@ -1,0 +1,151 @@
+{% extends "base_page.html" %}
+{%block title%} math {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>English Alphabates</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>English</p>
+             <li>
+                <a onclick="return onClickOpen(19, 2.86, 'grade_k');" href="{{url_for('alpharev')}}">Alphabates Revision</a>
+            </li>
+            <li>
+                <a href="{{url_for('quizgk')}}">How to solve quiz</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2> Alphabates Revision</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/b74UKE_eMMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <h3>Parent should follow below points:</h3>
+            <!-- <h4>Parent should teach kids simply giving following examples:</h4> -->
+
+            <p>Learning the alphabet should begin early in a child's life.Start simple. Do not attempt to teach all 26 letters at once. Simply concentrate on a few letters at a time and allow your child to see, hear, and experience that letter in a variety of ways. Remember that children learn by utilizing their senses so while alphabet books can be a helpful learning tool you should utilize a number of approaches to teach the ABCs.</p>
+            <p>Buy or make letters that children can experience in 3-D and let the child construct letters as well using play dough. Alphabet coloring pages and crafts can also help reinforce your child's knowledge of letters.</p>
+            <p>The alphabet is the building block of literacy and so children must learn to recognize and name the letters, both in and out of order, and the sounds associated with each letter.</p>
+
+            <p>After watching this video please go to drawing section and try to write alphabates which you have studied.</p>
+
+
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Not Available
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li> Nora Girls School E-Learning
+                        -Youtube Video</li>
+                    <li>Different websites for courses</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('alpharev')}}">1</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('quizgk')}}">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('quizgk')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

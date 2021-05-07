@@ -1,0 +1,192 @@
+{% extends "base_page.html" %}
+{%block title%} Home {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/new_navCss.css')}}">
+
+
+
+
+{%endblock head%}
+
+
+
+{%block content %}
+
+
+<div class="primary-nav">
+    <button href="#" class="hamburger open-panel nav-toggle" onclick="">
+    <span class="screen-reader-text">Menu</span>
+    </button>
+    
+        <nav role="navigation" class="menu">
+    
+            <a href="#" class="logotype"><span>AUTODIDACT</span></a>
+    
+            <div class="overflow-container">
+    
+                <ul class="menu-dropdown">
+    
+                    <li><a href="#">Dashboard</a><span class="icon"><i class="fa fa-dashboard"></i></span></li>
+    
+                    <li class="menu-hasdropdown">
+                        <a href="#">Settings</a><span class="icon"><i class="fa fa-gear"></i></span>
+    
+                        <label title="toggle menu" for="settings">
+                            <span class="downarrow"><i class="fa fa-caret-down"></i></span>
+                        </label>
+                        <input type="checkbox" class="sub-menu-checkbox" id="settings" />
+    
+                        <ul class="sub-menu-dropdown">
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">Security</a></li>
+                            <li><a href="">Account</a></li>
+                        </ul>
+                    </li>
+    
+                    <li><a href="#">About</a><span class="icon"><i class="fa fa-heart"></i></span></li>
+    
+                    <li><a href="#">Contact</a><span class="icon"><i class="fa fa-envelope"></i></span></li>
+    
+                </ul>
+    
+            </div>
+    
+        </nav>
+    
+    </div>
+    
+    <div class="new-wrapper">
+    
+        <div class="container">
+            
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Course</h5>
+                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, magni officiis ullam dolore ad commodi quis veritatis ducimus molestiae in tempora laborum, odit, laudantium culpa dicta fuga quaerat cupiditate facere.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+            
+        </div>
+        
+    
+    </div>
+
+
+
+
+
+
+
+{%endblock content%}
+
+{%block scripts%}
+
+<script type="text/javascript" src="{{url_for('static',filename='js/new_navJs.js')}}">
+</script>
+
+
+<script type="text/javascript">
+    $('.nav-toggle').click(function() {
+    e.preventDefault();
+    $("html").toggleClass("openNav");
+    $(".nav-toggle").toggleClass("active");
+    });
+ </script>
+
+
+{%endblock scripts%}

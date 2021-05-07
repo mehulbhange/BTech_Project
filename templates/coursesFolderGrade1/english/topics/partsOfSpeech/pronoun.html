@@ -1,0 +1,384 @@
+{% extends "base_page.html" %}
+{%block title%} pronoun {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>English</h3>
+        </div>
+
+        <p>Parts of Speech</p>
+        <ul class="list-unstyled components">
+            <li>
+                <a onclick="return onClickOpen(20, 2.8, 'grade_1');" href="{{url_for('noun')}}">Noun</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(21, 2.8, 'grade_1');" href="{{url_for('pronoun')}}">Pronoun</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(22, 2.8, 'grade_1');" href="{{url_for('adjective')}}">Adjective</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(23, 2.8, 'grade_1');" href="{{url_for('verb')}}">Verb</a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Pronoun</h2>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/c4300UidkFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <h5>What is Pronoun?</h5>
+            <p>Pronouns are the words that are used in place of nouns in sentences. Such as I, me, you, your, he, him, his, she, her, it, we, us, our, you, your, they, them, their etc. Pronouns are used to enrich the reading and writing experience by eliminating repetitive use of noun.</p>
+            
+            <h6>Examples of Pronoun used in Sentences</h6>
+            <p><b>He</b> likes to eat pizza.</p>
+            <center>
+                <img src="https://cdn-0.educationwithfun.com/pluginfile.php/146/mod_page/intro/He.PNG" width="200px" height="150px">
+            </center>
+            <p> <b>She</b>  went to park.</p>
+            <center>
+                <img src="https://cdn-0.educationwithfun.com/pluginfile.php/146/mod_page/intro/She.PNG" width="200px" height="150px">
+            </center>
+            <p>Mr. Lee bought a house after <b>he</b> had saved enough money.</p>
+            <p>Mr. and Mrs. Kelly may not attend the party as <b>they</b> are on vacation right now.</p>
+            
+            
+            
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    hey welcome to home-school pop today we
+                    are going to learn about pronouns you're
+                    going to learn all about pronouns how to
+                    use them and how to find out which word
+                    in a sentence is a pronoun but first we
+                    want to hear from you
+                    Max who seven years old from America
+                    says hi I like your videos my name is
+                    Max and I love to learn very cool well
+                    you're in the right place that's what
+                    we're all about here a Lolita who's in
+                    third grade watched our goods and
+                    services video and said I had to write
+                    ten examples of goods and services I
+                    didn't understand goods and services
+                    this is a lifesaver thanks so much we're
+                    very welcome we're so glad it was
+                    helpful to you
+                    Adina from Kashmir Pakistan says I
+                    really liked your videos especially
+                    about the Statue of Liberty I learned so
+                    much from your videos I also like the
+                    Roman numeral video we're so glad that
+                    you're learning a lot from our videos
+                    and that you're enjoying them finally
+                    Annalise who's in first grade from
+                    Gadsden Alabama watched our urban
+                    suburban rural video and said I really
+                    liked the video it really helped me
+                    learn what areas people live in thanks
+                    well you're very welcome Annalise thanks
+                    for commenting well that was cool
+                    be sure and watch this video to the end
+                    to learn how you too could be featured
+                    on one of our videos
+                    so as we mentioned earlier today we're
+                    going to learn about pronouns how to use
+                    them how to spot them and how to have
+                    fun with them of course first we got to
+                    figure this out what is a pronoun that's
+                    a good question what is a pronoun a
+                    [Music]
+                    pronoun is a word that takes the place
+                    of a noun here we have a picture of a
+                    pit crew that is working on this stop
+                    car during a race now this pit crew is
+                    made up of professional mechanics these
+                    mechanics are pros they're always ready
+                    to step in and do a very special job
+                    pronouns are like professional words
+                    that are ready to step in and replace
+                    nouns kind of like this pit crew they're
+                    professionals they're ready for a
+                    special job they're good at what they do
+                    they're pros pronouns are pros at
+                    replacing nouns all right let's give you
+                    an example ok so here is a picture of a
+                    woman playing a guitar a wonderful
+                    musical instrument ok let's say this
+                    woman's name is baddy so the sentence is
+                    Betty plays guitar Betty
+                    plays guitar
+                    now let's change the sentence so it
+                    includes a pronoun she plays guitar she
+                    plays guitar did you see what happened
+                    there oh my goodness it's so cool
+                    she is the pronoun because it is a word
+                    that takes the place of the noun which
+                    is the name Betty she replace the word
+                    Betty she is a pronoun okay here's
+                    another one here's a picture of a boy
+                    who is fishing let's say this boy's name
+                    is Henry okay so the sentence is Henry
+                    went fishing Henry went fishing now
+                    let's change the sentence so it includes
+                    a pronoun so the new sentence would be
+                    he went fishing he went fishing isn't
+                    that cool
+                    he is the pronoun because it is a word
+                    that takes the place of the noun which
+                    is the name Henry he is the pronoun
+                    remember a pronoun is a word that takes
+                    the place of a noun that's the job of a
+                    pronoun to take the place of a noun
+                    okay time for another example here is a
+                    picture of a young woman who's reading a
+                    book let's say her name is Nicole and it
+                    looks like she's smiling a little bit so
+                    let's make this the sentence Nicole
+                    enjoys the book Nicole enjoys the book
+                    now let's change the sentence so it
+                    includes a pronoun
+                    this time instead of replacing a name
+                    with a pronoun we're going to replace a
+                    common noun with a pronoun we're going
+                    to replace book so our new sentence is
+                    Nicole enjoys it Nicole enjoys it that's
+                    pretty awesome isn't it it is the
+                    pronoun because it is a word that takes
+                    the place of a noun in this case we had
+                    the word it replaced the word book
+                    instead of Nicole enjoys the book we
+                    changed it to Nicole enjoys it
+                    it is the pronoun aren't pronouns fun
+                    hey and did you know the words I and you
+                    are pronouns
+                    - it's true and that rhymes which is
+                    always fun I and you are pronouns to see
+                    you use pronouns all the time in fact I
+                    just did oh I
+                    that's a pronoun you is a pronoun ah I
+                    did it again I did it again III I is a
+                    pronoun - oh my goodness I can't stop
+                    using pronouns oh I just did it again ah
+                    ah okay yeah the word you is a pronoun
+                    so if you see your friend Brittany and
+                    you want to compliment her on her outfit
+                    say hey you look cool in pink you
+                    wouldn't use her name Britney when
+                    you're speaking to her you would use the
+                    word you you is a pronoun it replaces
+                    her proper name and you would say you
+                    you look cool and pink next time
+                    somebody says you to you you could say
+                    that's a pronoun pronouns are everywhere
+                    they are everywhere and as we mentioned
+                    the word I is a pronoun - you say I am
+                    sad
+                    oh I is a pronoun you don't use your own
+                    name when you talk about yourself you
+                    use the word I I replaces your proper
+                    name and you say I we use the word I all
+                    the time I is another one of those
+                    professional words that replace nouns a
+                    pronoun oh and just to let you know I'm
+                    not really sad
+                    okay because I mean we're looking at
+                    pronouns pronouns are so awesome okay
+                    not sad pronouns are cool no sadness
+                    okay just to let you know don't worry
+                    don't worry cool here's another did you
+                    know hey did you know a pronoun can also
+                    replace multiple nouns yeah they're
+                    really fancy like that
+                    a pronoun can also replace multiple
+                    nouns let's say we have a sentence
+                    Rachel and Amy our friends Rachel and
+                    Amy are friends
+                    [Music]
+                    now let's try replacing two mounds
+                    Rachel and Amy with a pronoun our new
+                    sentence would be they are friends the
+                    word day is a pronoun because it's
+                    replacing the nouns Rachel and Amy they
+                    is a pronoun let's try another plural
+                    pronoun that's a pronoun that replaces
+                    multiple nouns okay let's say this
+                    little girl likes to walk on the beach
+                    and she says the sentence dad and I love
+                    the ocean now this one's a little weird
+                    the word dad is a proper noun because
+                    she calls him that that's his name that
+                    he's called by his daughter is dad so
+                    dad in this sentence is a proper noun
+                    and the word I we know is a pronoun so
+                    we are going to replace this proper noun
+                    and this pronoun with one single pronoun
+                    a plural pronoun that will cover both of
+                    those nouns our new sentence is we love
+                    the ocean the word we is a pronoun it's
+                    replacing the words dad and I dad and i
+                    are replaced with the pronoun we and
+                    notice it's a much shorter and more
+                    simple sentence we love the ocean this
+                    is the power of pronouns pronouns can
+                    replace a single noun or they can
+                    replace multiple nouns so to review a
+                    pronoun is a word that takes the place
+                    of a noun or multiple now
+                    [Music]
+                    here's a list of some of the more common
+                    ones I you he she it we they me him her
+                    us them a noun is a person place or
+                    thing and a pronoun does the same thing
+                    it's a professional word that replaces a
+                    noun or multiple nouns in a sentence in
+                    here they are and there's so much fun to
+                    use I you he she it we they me him her
+                    us them the pronouns hey we really do
+                    appreciate you watching this video with
+                    us we hope you learned some brand new
+                    things about pronouns and how to spot
+                    them how to muse them and all that kind
+                    of great stuff if you needed help with
+                    nouns and wanted to learn more about
+                    common and proper nouns we talked a
+                    little bit about that in this video you
+                    will see a link at the end of this video
+                    that you can click that you can go
+                    directly to that video thanks so much
+                    for watching this video on pronouns we
+                    hope to see you next time bye
+                    so you made it to the end of the video
+                    you are awesome remember the kids
+                    comments we promised you we would share
+                    how you two could be featured on one of
+                    our videos with the help of an adult
+                    leave your first name age and where you
+                    are from along with a comment you can
+                    share a joke a silly message or just
+                    share how much you love us if you are
+                    watching this as a class you can leave a
+                    comment to just share your teacher's
+                    name your grade and where you are from
+                    for a chance to be featured on one of
+                    our videos we hope to hear from you soon
+                    thanks for watching this video
+                    Chris the buck in mind the middle of the
+                    screen to subscribe or are you to watch
+                    these two videos see you fail
+                    you
+                    
+        </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Different websites for courses</li>
+                    <li> Homeschool Pop -Youtube Video</li>
+                    <li>https://educationwithfun.com/</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('noun')}}" tabindex="-1"
+                            aria-disabled="true">Previous</a>
+                    </li>
+
+                    <li class="page-item"><a class="page-link" href="{{url_for('pronoun')}}">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('adjective')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

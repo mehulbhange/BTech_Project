@@ -1,0 +1,246 @@
+{% extends "base_page.html" %}
+{%block title%} addition {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Addition</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Mathematics</p>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Addition</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(5, 2.8, 'grade_1');" href="{{url_for('additionnl')}}">Addition using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(6, 2.8, 'grade_1');" href="{{url_for('additionwp')}}">Addition using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(7, 2.8, 'grade_1');" href="{{url_for('additionn')}}">Addition sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(8, 2.8, 'grade_1');" href="{{url_for('addition12')}}">Add a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(9, 2.8, 'grade_1');" href="{{url_for('addition22')}}">Add a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Subtraction</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(10, 2.8, 'grade_1');" href="{{url_for('subnl')}}">Subtraction using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(11, 2.8, 'grade_1');" href="{{url_for('subwp')}}">Subtraction using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(12, 2.8, 'grade_1');" href="{{url_for('subswp')}}">Subtraction sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(13, 2.8, 'grade_1');" href="{{url_for('sub12')}}">Subtract a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(14, 2.8, 'grade_1');" href="{{url_for('sub22')}}">Subtract a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2 class="effect-underline">Add a two-digit number to a two-digit number</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/RKL0TX8ogmw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- </video> -->
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <p>This topic will help student to get better understanding of addition of two digit number with one digit.
+                This topic will build a strong base for future topics.</p>
+            <p>Apart from the examples taken in the video lecture parents should give some other examples in order to
+                train your kids.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Hey look a village come let us learn
+                    adding two-digit numbers with regrouping
+                    in this village can you see those
+                    colorful bamboo sticks there are 47 red
+                    bamboo sticks and 28 green bamboo sticks
+                    let's see how many bamboo sticks are
+                    there in all let's group them into tens
+                    and ones and then add them so there are
+                    four tens and 7 ones red bamboo sticks
+                    and two tens and eight ones green bamboo
+                    sticks now as we know we first have to
+                    add the ones and then the tens so 7 1
+                    plus 8 1 is equal to 15 ones now 15 ones
+                    is equal to 1 10 and 5 1 so we regroup
+                    it that is we take the 110 bamboo sticks
+                    and place it with the other tens now
+                    count the ones and the tens we have
+                    seven tens and five ones which is equal
+                    to 75 thus we say that there are 75
+                    bamboo sticks in all now as you know
+                    instead of counting the bamboo sticks we
+                    can directly add the numbers 47 and 28
+                    let's look at the
+                    process of addition of these numbers
+                    step one write the numbers in the tens
+                    and ones columns step two add the ones
+                    that is seven plus eight is equal to 15
+                    regroup the fifteen ones that is 15 1 is
+                    equal to 1 10 plus 5 ones carry the 1 10
+                    to the tens column and write 5 in the
+                    ones column step three add the tens that
+                    is 1 plus 4 plus 2 is equal to 7 now
+                    write 7 under the tens column so we got
+                    the answer as 75 47 plus 28 is equal to
+                    75 thus there are 75 bamboo sticks in
+                    all
+                    look at the herd of animals there are
+                    sixteen goats and eight she in it now
+                    let's see how many animals are there in
+                    all
+                    here we have to add sixteen and eight to
+                    find out the total number of animals add
+                    the ones that is six plus eight is equal
+                    to 14 regroup 14 to get one ten and four
+                    ones carry one ten to the tens column
+                    and write 4 in the ones column
+                    now add the tens that is one plus one is
+                    equal to two
+                    thus 16 plus 8 is equal to 24
+                    look there are 24 animals in all look at
+                    the juicy sugar canes some are big and
+                    some are small there are 57 big sugar
+                    canes and 14 small sugar canes let's see
+                    how many sugar canes are there in all
+                    here we have to add 57 and 14 to find
+                    out the number of sugar canes add the
+                    ones that is 7 plus 4 is equal to 11
+                    carry 110 to the tens column and write
+                    one in the ones column
+                    now add the tens that is 1 plus 5 plus 1
+                    is equal to 7 thus 57 plus 14 is equal
+                    to 71
+                    there are 71 big and small sugar canes
+                    in all let's eat them hope you enjoyed
+                    the visit to the village
+
+
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Periwinkle -Youtube Video</li>
+                    <li>Different websites for courses</li>
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item ">
+                        <a class="page-link" href="{{url_for('addition12')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('addition22')}}">5</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('subnl')}}">6</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('subnl')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

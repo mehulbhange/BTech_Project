@@ -1,0 +1,254 @@
+{% extends "base_page.html" %} 
+{%block title%} subtraction {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Subtraction</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Mathematics</p>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Addition</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(5, 2.8, 'grade_1');" href="{{url_for('additionnl')}}">Addition using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(6, 2.8, 'grade_1');" href="{{url_for('additionwp')}}">Addition using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(7, 2.8, 'grade_1');" href="{{url_for('additionn')}}">Addition sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(8, 2.8, 'grade_1');" href="{{url_for('addition12')}}">Add a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(9, 2.8, 'grade_1');" href="{{url_for('addition22')}}">Add a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Subtraction</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(10, 2.8, 'grade_1');" href="{{url_for('subnl')}}">Subtraction using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(11, 2.8, 'grade_1');" href="{{url_for('subwp')}}">Subtraction using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(12, 2.8, 'grade_1');" href="{{url_for('subswp')}}">Subtraction sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(13, 2.8, 'grade_1');" href="{{url_for('sub12')}}">Subtract a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(14, 2.8, 'grade_1');" href="{{url_for('sub22')}}">Subtract a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2 class="effect-underline">Subtraction using a number line</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/gSBruxb0OsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <p>Counting on number line is the playful method through which the child is learning subtraction of numbers.
+                Subtraction of numbers using colorful number line that makes the children more interested.
+                Subtraction means minus. The sign of addition is - . Subtraction of the numbers on number line this method is used only for small numbers. For smaller grades the number line starts with zero. Number line is the line which starts from zero and has numbers 1,2,3 … on it at equal distances.
+                 It is used in addition,subtraction and multiplication because you can jump from one number to another number.</p>
+                <h5>Exmples</h5>
+                <h6>Imagine you have 6 berries and you eat 2 of them 😋. How many berries do you have left?</h6>
+                <center><img 
+                    src="https://firebasestorage.googleapis.com/v0/b/turbo-math.appspot.com/o/lesson-articles%2FwGb1mcydTVeaVDG2mCbjHdmubZ22%2Fnumber-line-subtraction%2FG1%20-%20number%20line%20subtraction%201.jpg?alt=media&token=fa512ad0-cee7-4c97-a61d-37dcaefd9de3" width="350px"
+                    height="200px" alt="oppositeSample"></center>
+                <p>To find the answer, you must subtract the two numbers. You can use a number line to help.</p>
+                <p>Take following example to draw number line</p>
+                <center><img 
+                    src="https://firebasestorage.googleapis.com/v0/b/turbo-math.appspot.com/o/lesson-articles%2FwGb1mcydTVeaVDG2mCbjHdmubZ22%2Fnumber-line-subtraction%2FG1%20-%20number%20line%20subtraction%202.jpg?alt=media&token=c6ad112b-f1aa-4e9c-8b25-8df4e4e62b75" width="350px"
+                    height="200px" alt="oppositeSample"></center>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    hello children this is our maths class
+                    in the previous class we have learned to
+                    do addition
+                    using number line do you know children
+                    we can also do subtraction using the
+                    number line method
+                    children before we start remember that
+                    in number line method if we move forward
+                    that is to the right side
+                    the number gets bigger or larger
+                    and if we move backward that is to the
+                    left side
+                    the number gets smaller now let's learn
+                    how to do subtraction using number line
+                    5 minus 2 when we do number
+                    line subtraction we should always start
+                    with the first number
+                    now tell me which is the first number
+                    yes 5 is the first number so the frog
+                    starts at number five and then moves
+                    two places towards the left side
+                    the frog lands on three
+                    so five minus two is equal to
+                    three eight minus
+                    four the frog starts at number
+                    eight and then moves four places to the
+                    left
+                    the frog lands on number four so
+                    eight minus four is equal to
+                    four six
+                    minus three the frog
+                    starts at number six and then moves
+                    three places to the left
+                    the frog lands on number three so six
+                    minus three is equal to 3
+                    now let's do a quick review
+                    10 minus 2 tell me children
+                    which one is the first number yes
+                    10 is the first number so the frog will
+                    start
+                    at 10 and which side will it move
+                    will it jump towards right side no
+                    it will jump two numbers to the left
+                    side
+                    so the frog lands on number eight
+                    therefore ten minus two is equal to
+                    eight seven
+                    minus five tell me children
+                    which one is the first number that's
+                    right
+                    seven is the first number so the frock
+                    will start
+                    at seven and which side will it move
+                    it will jump five numbers towards the
+                    left side one two
+                    three four five
+                    so the frog lands on which number
+                    it lands on number two
+                    therefore seven minus five is equal to
+                    two i hope now
+                    everyone is clear with a number line
+                    subtraction
+                    children in the next class we will do
+                    word problems of subtraction
+                    alright thank you and have a nice day                    
+                    
+                    </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Ai's KinderWorld -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>https://classace.io/</li>
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('addition22')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    
+                    <li class="page-item"><a class="page-link" href="{{url_for('subnl')}}">6</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('subwp')}}">7</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('subwp')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

@@ -1,0 +1,58 @@
+{% extends "base_page.html"%}
+{%block title%}Home{%endblock title%}
+{%block head%}
+    <style>
+        body {
+            /* Location of the image */
+            background-image: url(../static/images/background.jpg);
+            /* Background image is centered vertically and horizontally at all times */
+           
+            /* Background image doesn't tile */
+            background-repeat: no-repeat;
+            /* Background image is fixed in the viewport so that it doesn't move when 
+                the content's height is greater than the image's height */
+            background-attachment: fixed;
+            /* This is what makes the background image rescale based
+                on the container's size */
+            background-size: 100%;
+            /* Set a background color that will be displayed
+                while the background image is loading */
+            background-color: #464646;
+
+
+        }
+    </style>
+{%endblock head%}
+
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+
+{%block content%}
+
+    <body>
+         
+        <div>
+            <div>
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='images/class_pre.png')}}" alt="Pre-K" width="10%" style="margin-left: 30%;margin-top: 2%;">
+            </div>
+
+            <div>
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='images/grade_k.png')}}" alt="grade-K" width="10%" style="margin-left: 45%;">
+            </div>
+
+            <div>
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='images/grade_1.png')}}" alt="grade-1" width="10%" style="margin-left: 30%;">
+            </div>
+
+            <div>
+                <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='images/grade_2.png')}}" alt="grade-2" width="10%" style="margin-left: 45%;">
+
+            </div>
+
+        </div>
+    </body>
+
+{%endblock content%}

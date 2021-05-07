@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>grade1Details</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<style>
+  body {
+    font-family: arial;
+  }
+
+  .caption {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 25px;
+    text-align: center;
+  }
+
+  .tr {
+    display: flex;
+  }
+
+  .td {
+    width: 20%;
+    border: 1px solid #777;
+    padding: 10px;
+  }
+
+  .th {
+    display: flex;
+    background: mediumblue;
+    color: white;
+  }
+
+  .tr:nth-of-type(even) {
+    background: #efefef;
+  }
+
+  @media (max-width: 600px),
+  (max-device-width: 600px) {
+    .th {
+      display: none;
+    }
+
+    .tr {
+      display: block;
+      margin-bottom: 25px;
+      background: transparent !important;
+    }
+
+    .td {
+      background: #f0f0f0;
+      display: flex;
+      width: 90%;
+      margin: auto;
+    }
+
+    .td:before {
+      font-weight: bold;
+      display: block;
+      width: 50%;
+    }
+
+    .td:nth-of-type(1) {
+      background: mediumblue;
+      color: white;
+      font-weight: bold;
+    }
+
+    .td:nth-of-type(1):before {
+      content: "Name:";
+    }
+
+    .td:nth-of-type(2):before {
+      content: "DoB:";
+    }
+
+    .td:nth-of-type(3):before {
+      content: "Specialization:";
+    }
+
+    .td:nth-of-type(4):before {
+      content: "Blood Group:";
+    }
+
+    .td:nth-of-type(5):before {
+      content: "Contact Number:";
+    }
+  }
+
+  @media (max-device-width: 600px) {
+    .table {
+      font-size: 1rem;
+    }
+
+    .td {
+      padding: 10px;
+    }
+  }
+</style>
+
+<style>
+  .float-left-child {
+    float: left
+  }
+
+
+  .inline-block-child {
+    display: inline-block;
+  }
+
+
+  .flex-parent {
+    display: flex;
+  }
+
+  .flex-child {
+    flex: 1;
+  }
+
+
+  .inline-flex-parent {
+    display: inline-flex;
+  }
+
+
+  /* base css */
+  body {
+    padding: 1rem;
+  }
+
+  h3 {
+    margin: 1.5rem 0 .25em;
+    clear: both;
+  }
+
+  .parent {
+    background: rgb(44, 4, 124);
+    padding: 1rem
+  }
+
+  .child {
+    border: 1px solid rgb(246, 244, 247);
+    padding: 1rem
+  }
+
+  .grid-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr
+  }
+</style>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
+<body>
+
+  <h3 align="center" class="caption" >Student Details-GradeK</h3>
+
+  <table>
+      <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>city</th>
+          <th>Birthdate</th>
+          <th>Full Name</th>
+          <th>Class</th>
+        </tr>
+
+        {%for i in gradeklist %}
+        <tr>
+          {%for j in i %}
+          <td>{{j}}</td>
+          {%endfor%}
+        </tr>
+        {%endfor%}
+  </table>
+
+
+
+  <h3 align="center" class="caption">Student Marks-GradeK</h3>
+
+  <div class='parent grid-parent'>
+    <div class='child' style="color: white;">
+
+      <tr>
+        {%for i in keyouter %}
+        {%for j in i %}
+        <th scope="row">{{j}}</th>
+        <hr>
+      </tr>
+      {%endfor%}
+      {%endfor%}
+    </div>
+    <div class='child' style="color: white;">
+      <tr>
+        {%for k in marksouter %}
+        {%for l in k %}
+        <th>{{l}}</th>
+        <hr>
+      </tr>
+      {%endfor%}
+      {%endfor%}
+    </div>
+  </div>
+
+  <center>
+    <p class="cp-text">
+      © Copyright 2021 Autodidact. All rights reserved.
+  </p>
+  </center>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+</html>

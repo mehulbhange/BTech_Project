@@ -1,0 +1,238 @@
+{% extends "base_page.html" %}
+{%block title%} math {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Introduction to Numbers</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Mathematics</p>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Learn to
+                    count upto 5</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(10, 2.8, 'pre_k');" href="{{url_for('IntroNumbers')}}">Number 1</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(11, 2.8, 'pre_k');" href="{{url_for('intro2')}}">Number 2</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(12, 2.8, 'pre_k');" href="{{url_for('intro3')}}">Number 3</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(13, 2.8, 'pre_k');" href="{{url_for('intro4')}}">Number 4</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(14, 2.8, 'pre_k');" href="{{url_for('intro5')}}">Number 5</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Learn to
+                    count upto 10</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(15, 2.8, 'pre_k');" href="{{url_for('intro6')}}">Number 6</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(16, 2.8, 'pre_k');"  href="{{url_for('intro7')}}">Number 7</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(17, 2.8, 'pre_k');" href="{{url_for('intro8')}}">Number 8</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(18, 2.8, 'pre_k');" href="{{url_for('intro9')}}">Number 9</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(19, 2.8, 'pre_k');" href="{{url_for('intro10')}}">Number 10</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(20, 2.8, 'pre_k');" href="{{url_for('comp')}}">Count objects/shapes</a>
+            </li>
+            <li>
+                <a href="{{url_for('solveQuiz')}}">How to solve quiz</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2 class="effect-underline">Introduction to numbers -Number 6</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/oi9tq0PTH7k"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- </video> -->
+            <h3>Parent should follow below points:</h3>
+            <p>The very first point is One of the early ways to get kids thinking numbers in a creative way
+                is to get them painting.They can see them, they can draw them, they can colour them in bright colours
+                and repeat the number out loud as they have some fun with painting.</p>
+            <p>An oldie, but a good technique is a game that you can create from a really simple three dots to ten dots,
+                twenty dots, as your kids develop. With a simple chalkboard or plain paper, you can create any image you
+                want and put the kids to the test.</p>
+            <p>Make numbers an adventure and your kids will enjoy the learning process even more. As they see numbers in
+                all kinds of different places other than chalkboards and exercise books, they’ll also start to see them
+                as more than just numbers. In their own small way, they’ll start to get it that numbers are pretty
+                important.</p>
+            <p>If you don’t know any, YouTube will soon fix that as there are a million nursery rhymes and kid’s songs
+                out there most of us even know about yet. Sit with your kids while you play the videos and sing along.
+                Use your fingers to show the numbers for extra emphasis.</p>
+            <p>Write a number on a blank page or chalkboard. Then ask your child to draw apples matching that number. Or
+                stick men, houses or trees, whatever your child likes drawing. The key is to get them drawing the right
+                number. A nice creative and educational exercise. </p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    smile and learn hello hello hello here
+                    we are again today I'll be introducing
+                    number six a very good morning to
+                    everyone do you know which number I am
+                    I'm number six stay with me till the end
+                    we have a song for you let's start with
+                    my name repeat after me
+                    six six can't hear you
+                    excellent now I'll show you how to write
+                    number six we start up here and trace
+                    down drawing a curve now we trace like
+                    this making a circle you did great look
+                    I look like a whistle turn at home using
+                    some paper and a pencil it's easy as pie
+                    did you want to look at some examples
+                    someone's dropped a few coins how many
+                    are there one two three four five and
+                    six
+                    there are six coins and how many ice
+                    cubes are there in this glass one two
+                    three four five and six there are six
+                    ice cubes how many spots does this cow
+                    have one two three four five and six
+                    oh friend the cow has six spots do you
+                    want to sing with us later and how many
+                    ants are there in this anthill one two
+                    three four five and six there are six
+                    ants you did so well my friends time to
+                    sing little cow
+                    this is not just any cow her six spots
+                    are real Sam hell a footballer painted
+                    them for her he also works as a brand
+                    chauffeur did you like the video we have
+                    so many more subscribe by clicking on
+                    the seal ah and if you want to keep
+                    watching more videos click on the boxes
+                    [Music]</div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Smile and Learn-English -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>https://www.foundationeducation.edu.au/articles/2018/06/how-introduce-numbers-preschoolers</li>
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item ">
+                        <a class="page-link" href="{{url_for('intro5')}}" tabindex="-1" aria-disabled="false">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('intro6')}}">6</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('intro7')}}">7</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('intro8')}}">8</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('intro9')}}">9</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('intro7')}}">Next</a>  
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

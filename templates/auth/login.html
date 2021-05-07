@@ -1,0 +1,36 @@
+{%extends "base_page.html" %}
+{%block title %} Login {%endblock title%}
+{%block content%}
+
+<div class="container-md pt-5 my-5" style="border: 2px solid;">
+
+  <center>
+    <p style="color: green; margin-top: 20px;">
+      {{message}}
+    </p>
+    <p style="color: red; margin-top: 20px;">
+      {{error_message}}
+    </p>
+  </center>
+
+    <form  action={{ url_for("login")}} method="POST" style="margin-left: 35%;">
+        <div class="form-group col-md-4">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="inputEmail" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" name="inputPassword" required>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+  
+</div>
+
+
+
+{% endblock content%}

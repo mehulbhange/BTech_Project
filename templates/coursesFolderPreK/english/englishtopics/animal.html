@@ -1,0 +1,162 @@
+{% extends "base_page.html" %}
+{%block title%} math {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<script>
+
+    
+
+</script>
+
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Birds and Animals</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>English</p>
+
+            <li>
+                <a onclick="return onClickOpen(1, 2.8, 'pre_k');" href="{{url_for('birds')}}" id="birds" > Birds </a> 
+                <!-- 1. _id 2. _progress 3. _class 4. _new_open -->
+            <!--    <a onclick="onClickOpen(1,5 ,'pre_k','birds');" style="color: blue;text-decoration: underline;" > Birds </a> -->
+            </li>
+            <li>
+                <a onclick="return onClickOpen(2, 2.8, 'pre_k');" href="{{url_for('animals')}}">Animals</a>
+                <!-- 1. _id 2. _progress 3. _class 4. _new_open -->
+            <!--    <a onclick="onClickOpen(2, 5,'pre_k','animals');" style="color: blue;text-decoration: underline;">Animals</a> -->
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Learn-Names of Animals(English words)</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/BPKTPd6jFos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <!-- <h3> should follow below points:</h3> -->
+            <h4>Parent need to teach following activities to their child:</h4>
+            <h6>Match Pictures with Animals:</h6>
+            <p>Parents buy animal figures and toys for their toddlers.If you haven’t, now is the time. Once you have a few, print a picture of the animal or use a nature book. Get your toddler to recognise animal names with pictures by placing the toy on the respective picture.</p>
+            <h6>Make Animal Sounds:</h6>
+            <p>The quack of a duck or the meow of a cat is not just a sound; they’re lessons for your little one to understand that animals use these sounds to communicate. Play sound games to teach your tot about animal names. Oink, bark, growl, moo and see if he can identify the animal that you’re imitating. This activity can be reversed with an older preschooler- just show or name an animal and ask the child to make the sound.</p>
+            <h6>Play Memory Games:</h6>
+            <p>Make a list of animals with pictures and names printed in sets of two. Keep one set face down and ask your toddler to uncover each card and match it with the similar one in the other set. This will keep him busy, help him identify animals, and will also help sharpen his memory. Once he’s old enough to learn to read, you can play the same game, but with a twist: Print pictures of animals on one card and their names on another card and ask him to match them.</p>
+
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    not available.
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li> MagicBox English-Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>parenting.firstcry.com</li>
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('birds')}}" tabindex="-1"
+                            aria-disabled="true">Previous</a>
+                    </li>
+
+                    <li class="page-item"><a class="page-link" href="{{url_for('animals')}}">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('birds')}}">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script type="text/javascript" src="{{url_for('static',filename='js/visitCount.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

@@ -1,0 +1,27 @@
+html {
+/*   color: #00838F */
+  color: rgb(0, 8, 8);
+}
+
+
+div#memory_board{
+/*    #F8BBD0; */
+	background:lightsteelblue;
+	border:darkcyan 1px solid;
+	width:800px;
+	height:540px;
+	padding:24px;
+	margin:0px auto;
+}
+div#memory_board > div{
+/* 	background: url(tile_bg.jpg) no-repeat; */
+	border:darkcyan 1px solid;
+	width:71px;
+	height:71px;
+	float:left;
+	margin:10px;
+	padding:20px;
+	font-size:64px;
+	cursor:pointer;
+	text-align:center;
+}

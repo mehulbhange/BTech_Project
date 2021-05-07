@@ -1,0 +1,412 @@
+{% extends "base_page.html" %} 
+{%block title%} subtraction {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Subtraction</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Mathematics</p>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Addition</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(5, 2.8, 'grade_1');" href="{{url_for('additionnl')}}">Addition using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(6, 2.8, 'grade_1');" href="{{url_for('additionwp')}}">Addition using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(7, 2.8, 'grade_1');" href="{{url_for('additionn')}}">Addition sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(8, 2.8, 'grade_1');" href="{{url_for('addition12')}}">Add a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(9, 2.8, 'grade_1');" href="{{url_for('addition22')}}">Add a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Subtraction</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(10, 2.8, 'grade_1');" href="{{url_for('subnl')}}">Subtraction using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(11, 2.8, 'grade_1');" href="{{url_for('subwp')}}">Subtraction using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(12, 2.8, 'grade_1');" href="{{url_for('subswp')}}">Subtraction sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(13, 2.8, 'grade_1');" href="{{url_for('sub12')}}">Subtract a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(14, 2.8, 'grade_1');" href="{{url_for('sub22')}}">Subtract a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2 class="effect-underline">Subtraction using word problems</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/B5JVqZVqFs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <h5>Why learning word problems are important?</h5>
+            <p>Word problems give students a way to practice all the tools they have learned. Especially in higher
+                levels, word problems involve multiple steps and can use many different types of math. Often, students
+                are able to bring in concepts learned in past chapters or even past grades. This helps reinforce
+                previously learned topics and
+                show students the benefits of learning a concept instead of memorizing it for a test!</p>
+            <p>Word problems are a key tool in determining what material a student feels comfortable. With multiple
+                choice problems, or even basic solving, there are many opportunities for children to get the right
+                answer without actually understanding the process or rationale behind the math. But, with word problems,
+                students must display the higher levels of thinking that is required, meaning that they must display
+                that they have the knowledge needed to solve the question.
+                Word problems make it easier to see what concepts students need extra help on.</p>
+            <p>Hence, parents should give as much examples as possible.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    what problem
+                    of subtraction or you can see problem
+                    sums of subtraction
+                    let us see some examples to understand
+                    this
+                    william had seven apples
+                    and he ate four apples
+                    how many apples are left with him
+                    children whenever you see the question
+                    if the word left is seen that means
+                    you are going to subtract it
+                    okay you can easily understand
+                    this question is of subtraction
+                    so you're going to follow all the steps
+                    as you did
+                    exactly the same in problem sums of
+                    addition the only difference over here
+                    will be
+                    instead of plus sign you will show the
+                    minus sign okay and instead of writing
+                    total
+                    you will write left now let us do this
+                    and understand
+                    william had seven apples
+                    let us count one two three
+                    four five six and seven
+                    and he ate four apples he ate four
+                    apples that means he's running short of
+                    four apples because he already
+                    ate it so we'll write
+                    four apples how many apples are
+                    left with him okay left word is coming
+                    that means we need to
+                    subtract it from the given apples that
+                    is 7
+                    out of 7 you will subtract 4 let us do
+                    this
+                    we'll subtract 4 okay now just count
+                    how many apples are left one two
+                    three okay so you will get the
+                    answer if you subtract four
+                    from seven you will get three apples
+                    and then you will write left
+                    three apples are left
+                    okay now let's do next question
+                    this is a two digit number so we are
+                    going to do this
+                    a fruit seller has 78 oranges
+                    he sells 23 oranges
+                    how many oranges are left with him
+                    let us see again left word is coming
+                    that means
+                    it's a problem sum of subtraction okay
+                    let's read the first line a fruit seller
+                    has
+                    78 oranges okay
+                    first of all you will write once and
+                    tense
+                    for two digit number you will always
+                    write once and ten
+                    okay and if it's a three digit number
+                    there also you will write one stanza
+                    hundreds okay so let's write the first
+                    one that is 78
+                    oranges you will highlight it then
+                    read next one he sells 23
+                    oranges okay he
+                    sells 23 oranges that means he had 78
+                    out of that he sells 23 oranges so
+                    he will get some
+                    reduced number of oranges okay
+                    he will not get more he will not get
+                    exactly the same
+                    which he had but some amount will be
+                    less from that so let's see
+                    how many oranges are left with him
+                    left means minus you will put the sign
+                    of minus
+                    you will write answer how you're going
+                    to subtract this
+                    if you subtract 3 from 8 you will get
+                    5 and when you subtract 2 from
+                    7 you will get 5
+                    and then you will write oranges
+                    left ok children in this question
+                    the word sell has come okay that means
+                    some amount has got reduced
+                    okay so when something
+                    gets reduced then also you can
+                    understand it's a problem some of
+                    subtraction okay these are the key words
+                    you need to keep in your mind
+                    how the reduction of the thing is being
+                    shown
+                    let's see next question george has 25
+                    books
+                    and mary took 12 books out of 10.
+                    how many books are left with george
+                    again left word is coming that means
+                    it's a problem
+                    some of subtraction
+                    now let us read the question once again
+                    from the starting
+                    george has 25 books
+                    you will write one sentence first then
+                    you will
+                    highlight the number 25 we are talking
+                    about
+                    books write down 25 books now read it
+                    and mary took 12 books highlighted
+                    and write down 12 books out of them
+                    how many books are left with george so
+                    now what you're going to do is
+                    left means minus you will put the sign
+                    of minus
+                    you will write answer and how you're
+                    going to do is you will subtract
+                    when you subtract 2 from 5 you will get
+                    3 and when you subtract 1 from
+                    2 you will get 1.
+                    how many books are left here we are
+                    talking about the books
+                    so you will write books left
+                    okay children so you will focus like
+                    this
+                    13 books are left here the word took is
+                    coming
+                    that means he gave it to somebody or
+                    somebody has taken it from him
+                    so again the number has reduced whenever
+                    you will see
+                    there is some reduction you will think
+                    of
+                    minus that is subtraction now let's see
+                    number four manish bought 36
+                    candles for diwali only 21 candles were
+                    used
+                    how many candles were left with him
+                    again left is there that means it's a
+                    minus sum subtraction sum now let us
+                    focus the question again
+                    manish bought 36 candles okay
+                    write down once intense now you'll
+                    highlight
+                    36 candles you will write it
+                    only 21 candles were used okay
+                    here used word has come that means
+                    that has been used so again the thing
+                    has been
+                    reduced okay the exact actual number was
+                    36
+                    now it has come to 21. so
+                    we'll write 21 candles okay how many
+                    candles were left with him
+                    so leftward has come that means minus
+                    now you will put the minus sign you will
+                    write answer
+                    let us solve this if you remove 1
+                    from 6 or you subtract 1 from 6 you will
+                    get
+                    5 and after subtracting
+                    2 from 3 you will get 1
+                    so your answer is 15. now read the
+                    question last line again
+                    how many candles were left with him
+                    okay here we are talking about candles
+                    you will write 15 candles
+                    left okay
+                    now let's see the next one tom bought
+                    29 eggs from shop
+                    out of which 12 eggs were broken
+                    how many eggs are left with him
+                    left means minus now let us focus the
+                    question once again
+                    tom bought 29 x okay
+                    write down one sentence since it's a two
+                    digit number
+                    one cent tense 29 x
+                    you will write 29 x
+                    out of which 12 eggs were broken
+                    okay how many eggs were broken 12 you
+                    will write
+                    12 that means out of 29
+                    he already lost 12 okay because
+                    12 eggs were broken so that is of no use
+                    to him
+                    so again the thing has been reduced okay
+                    the number has been reduced so now
+                    what we'll do is left means
+                    minus how many eggs are left minus sign
+                    you will put
+                    then you will write answer now let's
+                    solve this
+                    when you subtract 2 from 9 you will get
+                    7 and when you subtract 1 from 2
+                    you will get 1. how many
+                    eggs are left that means we're talking
+                    about
+                    x we'll get the answer 17
+                    x left okay children
+                    now let's see some practice exercises
+                    these are the practice exercises you can
+                    solve it
+                    and tell me the answers children all you
+                    need to remember
+                    while doing the problem sum of addition
+                    and subtraction is whenever
+                    addition comes that time you will see
+                    the words like
+                    total altogether in all
+                    and whereas when we talk about problem
+                    solves of subtraction you will see the
+                    word
+                    left sold lost
+                    broken cell and so on
+                    from the question itself after reading
+                    and catching these words you can
+                    understand that these words shows
+                    the actual number has reduced
+                    okay that means there is some reduction
+                    in the
+                    actual number so definitely it's a
+                    problem some of
+                    subtraction and you will do subtraction
+                    so try these questions by your own and
+                    tell me the answers              
+                    </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Kids Study Zone -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>https://www.foundationeducation.edu.au/articles/2018/06/how-introduce-numbers-preschoolers</li>
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('subnl')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('subwp')}}">7</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('subswp')}}">8</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('subswp')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

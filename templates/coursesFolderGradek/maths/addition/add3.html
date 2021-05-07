@@ -1,0 +1,175 @@
+{% extends "base_page.html" %}
+{%block title%} maths {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Addition</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Maths</p>
+            <li>
+                <a onclick="return onClickOpen(13, 2.86, 'grade_k');" href="{{url_for('add1')}}">Addition-1</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(14, 2.86, 'grade_k');" href="{{url_for('add2')}}">Addition-2</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(15, 2.86, 'grade_k');" href="{{url_for('add3')}}">Addition-3</a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2> Addition</h2>
+            <h3>Addition - Part 3</h3>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/AaxrqDuw1Xk"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h3>Parent should read below points and explain to your child:</h3>
+            <!-- <h4>Parent should teach kids simply giving following examples:</h4> -->
+            <h5> Addition card game:</h5>
+            <p>Using a deck of cards, this game can be played with 2-4 players. Each player picks up two cards, they
+                then need to add the two numbers together and give the answer to the sum. If they get it right, they get
+                to keep the cards. If they don’t, they have to put their cards back to the bottom of the pile. The
+                student with the most cards at the end wins!</p>
+            <center><img src="{{url_for('static',filename='images/mathsgradek/add1.webp')}}" width="550px"
+                    height="400px" alt="oppositeSample"></center>
+            <h5>Beads and cards adding activity:</h5>
+            <p>This activity can be varied to suit the resources you have available to you. We used a deck of cards, you
+                could also use two dice depending on the skill level of your students. Students pull two cards from a
+                deck of cards. They then thread the beads onto the pipe cleaner to show the two numbers. The students
+                then have concrete objects to count to work out the answer to the number sentence.</p>
+            <center><img src="{{url_for('static',filename='images/mathsgradek/add2.webp')}}" width="550px"
+                    height="400px" alt="oppositeSample"></center>
+            <h5>Coat hanger and pegs addition machine:</h5>
+            <p>Another great hands-on activity to consolidate the concept of addition. Have students roll two dice and
+                then place the pegs on the coat hanger to show the two numbers rolled. This provides them with concrete
+                materials to then count the total.</p>
+            <center><img src="{{url_for('static',filename='images/mathsgradek/add3.webp')}}" width="550px"
+                    height="400px" alt="oppositeSample"></center>
+            <h5>Addition catch</h5>
+            <p>Using a beach ball, write simple addition sums on the ball. Students throw the ball to each other and
+                pick a sum close to one of their hands to answer. As a fun alternative, play a class game of catch, time
+                how long it takes for every student to catch and answer a sum.</p>
+            <center><img src="{{url_for('static',filename='images/mathsgradek/add4.webp')}}" width="550px"
+                    height="400px" alt="oppositeSample"></center>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Not Available
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li> Kids Academy
+                        -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>www.teachstarter.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('add2')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('add3')}}">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('add1')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

@@ -1,0 +1,247 @@
+{% extends "base_page.html" %}
+{% block tiitle %} Profile {% endblock %}
+
+{% block head%}
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/profile.css')}}"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    [data-toggle="collapse"] .fa:before {  
+    content: "\f139";
+  }
+  
+  [data-toggle="collapse"].collapsed .fa:before {
+    content: "\f13a";
+  }
+  
+</style>
+{% endblock head%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{% block content %}
+<div id="user-profile-2" class="user-profile" style="margin-top: 10PX; background-color:rgb(197, 239, 245);">
+    <div class="tabbable" >
+        <ul class="nav nav-tabs padding-18">
+            <li class="active">
+                <a data-toggle="tab" href="#home">
+                    <i class="green ace-icon fa fa-user bigger-120" ></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="tab" href="#feed">
+                    <i class="orange ace-icon fa fa-rss bigger-120"></i>
+                    Score Card
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content no-border padding-24">
+            <div id="home" class="tab-pane in active">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 center">
+                        <span class="profile-picture">
+                            <img class="editable img-responsive" alt=" Avatar" id="avatar2" src="http://bootdey.com/img/Content/avatar/avatar6.png">
+                        </span>
+
+                        <div class="space space-4"></div>
+                    </div><!-- /.col -->
+
+                    <div class="col-xs-12 col-sm-9">
+                        <h4 class="blue">
+                            <span class="middle">{{username}}</span>
+                        </h4>
+
+                        <div class="profile-user-info">
+                            <div class="profile-info-row">
+                                <div class="profile-info-name"> <b>Full Name</b> </div>
+
+                                <div class="profile-info-value">
+                                    <span>{{name}}</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name"><b>Email</b>  </div>
+
+                                <div class="profile-info-value">
+                                    <i class="fa fa-map-marker light-orange bigger-110"></i>
+                                    <span>{{email}}</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name"><b>City</b>  </div>
+
+                                <div class="profile-info-value">
+                                    <span>{{city}}</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name"> <b>Date of Birth</b></div>
+
+                                <div class="profile-info-value">
+                                    <span>{{dob}}</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name"><b>Class</b></div>
+
+                                <div class="profile-info-value">
+                                    <span>{{s_class}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hr hr-8 dotted"></div>
+
+                        
+                            </div>
+                        </div>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+
+                <div class="space-20"></div>
+
+                <div class="row">
+                                <center><h3 >
+                                    Your Marks
+                                </h3></center>
+                </div>
+            </div><!-- /#home -->
+
+
+                <div class="container">
+                    <div id="accordion">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">               <i class="fa" aria-hidden="true"></i> 
+                                    Grade 1 Marks                  
+                            </button>
+                          </h5>
+                        </div>
+                  
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body">
+                            <div id="feed" class="tab-pane">
+                                <center><table border="1px" style="width: 90%; margin:30px 50px 40px 50px;" cellspacing="15" cellpadding="5">
+                                    <tr style="border: 1px solid;">
+                                        <th style="border: 1px solid;">Quiz name</th>
+                                        <th style="padding-left: 190px;">Score</th>
+                                    </tr>
+                
+                                    {% if d=={} %}
+                                    {% else %}
+                                    {% for key, value in d.items() %}
+                                       <tr style="border: 1px solid;  border-collapse: separate;
+                                       border-spacing: 0 15px;">
+                                            <td style="border: 1px solid;"><li>{{ key }} </li> </td>
+                                            <td style="padding-left: 200px;"> {{ value }} </td>
+                                       </tr >
+                                    {% endfor %}
+                                    {% endif %}
+                                    </table></center>
+                
+                                </div><!-- /.row -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <i class="fa" aria-hidden="true"></i>
+                              Grade K Marks
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body">
+                            <div id="feed" class="tab-pane">
+                                <center><table border="1px" style="width: 90%; margin:30px 50px 40px 50px;" cellspacing="15" cellpadding="5">
+                                    <tr style="border: 1px solid;">
+                                        <th style="border: 1px solid;">Quiz name</th>
+                                        <th style="padding-left: 190px;">Score</th>
+                                    </tr>
+                
+                                    {% if d2=={} %}
+                                    {% else %}
+                                    {% for key, value in d2.items() %}
+                                       <tr style="border: 1px solid;  border-collapse: separate;
+                                       border-spacing: 0 15px;">
+                                            <td style="border: 1px solid;"><li>{{ key }} </li> </td>
+                                            <td style="padding-left: 200px;"> {{ value }} </td>
+                                       </tr >
+                                    {% endfor %}
+                                    {% endif %}
+                                    </table></center>
+                
+                                </div><!-- /.row -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <i class="fa" aria-hidden="true"></i>
+                              Pre K Marks
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body">
+                            <div id="feed" class="tab-pane">
+                                <center><table border="1px" style="width: 90%; margin:30px 50px 40px 50px;" cellspacing="15" cellpadding="5">
+                                    <tr style="border: 1px solid;">
+                                        <th style="border: 1px solid;">Quiz name</th>
+                                        <th style="padding-left: 190px;">Score</th>
+                                    </tr>
+                
+                                    {% if d3=={} %}
+                                    {% else %}
+                                    {% for key, value in d3.items() %}
+                                       <tr style="border: 1px solid;  border-collapse: separate;
+                                       border-spacing: 0 15px;">
+                                            <td style="border: 1px solid;"><li>{{ key }} </li> </td>
+                                            <td style="padding-left: 200px;"> {{ value }} </td>
+                                       </tr >
+                                    {% endfor %}
+                                    {% endif %}
+                                    </table></center>
+                                </div><!-- /.row -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+            </div><!-- /#pictures -->
+
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{%endblock scripts%}

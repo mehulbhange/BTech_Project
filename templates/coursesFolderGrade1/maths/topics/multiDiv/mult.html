@@ -1,0 +1,342 @@
+{% extends "base_page.html" %}
+{%block title%} multiplication {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Mathematics</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Maths</p>
+            <li>
+                <a onclick="return onClickOpen(16, 2.8, 'grade_1');" href="{{url_for('mult')}}">Multiplication</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(17, 2.8, 'grade_1');" href="{{url_for('div')}}">Division</a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Multiplication</h2>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/dPksJHBZs4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <h5>Multiplication Activities:</h5>
+            <h6>Draw Waldorf multiplication flowers:</h6>
+            <p>This is a creative way to teach multiplication facts. Start by drawing the center of a flower and write any number 1–9 in the middle. Next, draw 12 petals around the center, labeling them 1–12. Last, draw another 12 petals and write the product of the center number and the petal adjacent to the new petal. To make it easy as an in-home assignment, make a blank template that your students can download at home.</p>
+            <h6>Play multiplication war:</h6>
+            <p>This activity can be used for one person or for a pair. Hopefully, most of your students have an ordinary deck of playing cards at home. If not, they can make their own number cards using index cards or scrap paper. To begin, students flip two cards face up. Then they multiply the two numbers on the cards together. Next, they write the math sentence on a piece of paper and solve the problem. You can assign a time limit, like ten minutes, or a number of problems, like six problems. If students are playing with a partner, both students flip two cards, multiply the numbers together 
+                and whoever has the highest product keeps the cards. At the end of the game, the player with the most cards wins.</p>
+            <h6>Play Bingo!</h6>
+            <p>Put a spin on a traditional game. Have students make their own cards by using the backside of any paper to draw a 5×5 grid and filling in the boxes with product numbers such as 16, 8, 48. 56, etc. The teacher calls multiplication problems, for example, 7×9. The students solve the product and, if that number is on their grid, cover that number with a bean or tile. Each student’s card is unique,
+                 and they can take pride in creating their own game. This activity can be played in person or virtually.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    rock and learn
+                    I don't know what multiplication is I
+                    wish someone could help me out
+                    whoa I know you you're Marco the pencil
+                    I am Marco the pencil and let me tell
+                    you multiplication is one of the coolest
+                    things you will ever learn it's a lot
+                    like having your own magic show
+                    really sure suppose you have a few of
+                    something with a little multiplication
+                    you can have you're going to learn my
+                    young friend
+                    you're going to learn I like magic
+                    tricks the rules application sounds
+                    complicated it's not it's really quite
+                    simple I'll teach you first do you know
+                    what multiplication is all about
+                    not really multiplication is a quick and
+                    powerful way of adding the same number
+                    over and over again if you can add and I
+                    know you can then you can certainly
+                    learn to multiply now let me show you
+                    how multiplication works suppose you
+                    have three guitars
+                    oh I like the way that one sounds me too
+                    now imagine you have five groups of
+                    three guitars whoa Marco that's a lot of
+                    guitars how many are there anyway well
+                    you could add 3 plus 3 plus 3 plus 3
+                    plus 3 which gives you 15 but that's so
+                    slow I'd rather be fast I thought so and
+                    that's where multiplication gives you
+                    power what we actually have are 1 2 3 4
+                    5 groups of three guitars 3/5 times or 3
+                    times 5 equals 15
+                    notice that this sign means times and it
+                    shows that you are multiplying you can
+                    also write the problem this way 3 times
+                    5 equals 15 so the power of
+                    multiplication is that it takes
+                    something slow like adding the threes
+                    one set at a time bada-bing
+                    it makes the process faster in one step
+                    are you getting the power of
+                    multiplication loud and clear
+                    difficult now the numbers in a
+                    multiplication problem have special
+                    names the numbers we are multiplying are
+                    called factors and the answer is called
+                    the product you can remember this quite
+                    easily because you go to stores to buy
+                    products right and where are those
+                    products often made factories that
+                    sounds kind of like factors oh you're
+                    good you you're good so we multiply the
+                    factors in this factory part of the
+                    equation to get our product or answer
+                    smart boy I like it away you think now I
+                    know a great way to practice
+                    multiplication and really experience
+                    what it's all about
+                    I'm going to need some pennies yes but I
+                    need even more pennies do you need could
+                    I perhaps get to 12 pennies okay we'll
+                    just multiply ourselves times six
+                    [Music]
+                    certainly two times six is twelve but I
+                    was hoping to get some real pennies
+                    we're not real
+                    let's work with these real pennies you
+                    can get your own pennies and easily
+                    practice this yourself take six groups
+                    of four pennies to know how many pennies
+                    you have you could count them one two
+                    three four five six seven eight nine 10
+                    11 12 13 14 15 16 17 18 19 20 21 22 23
+                    34
+                    but if you know your multiplication
+                    facts a much easier way is to say 4
+                    times 6 equals 24 that is much better
+                    now I know why it's important to learn
+                    my multiplication facts it can save me a
+                    lot of time in the long run right
+                    another great thing about multiplication
+                    is that the order in which you multiply
+                    the factors does not matter we can
+                    change the order of the factors and
+                    presto dgo the product does not change
+                    let me show you I this shows the
+                    multiplication problem
+                    4 times 6 and if we move it around like
+                    so it now shows the multiplication
+                    problem 6 times 4 but we still have the
+                    same number of pennies 24 oh I
+                    understand
+                    [Music]
+                    [Applause]
+                    let me show you some other neat tricks
+                    with multiplications when you multiply a
+                    number by 1 the answer is always that
+                    same number four times one equals four
+                    six times one equals six eight times one
+                    equals eight fifty times one equals you
+                    guessed it 50 that's easy to understand
+                    and since you can switch the places of
+                    the factors I'll bet you can multiply
+                    one times any number and your answer
+                    will always be that number that's right
+                    you're right
+                    here's another trick when you multiply
+                    by zero you always get zero any number
+                    times zero always equals zero that just
+                    makes sense Marco if you have zero
+                    groups of something you don't have
+                    anything and if you swap that around no
+                    matter how many times you add zero to
+                    zero
+                    you'll always get zero perfecto No how
+                    do people get good at multiplying they
+                    could use a calculator well it's not
+                    always convenient to use a calculator
+                    smart people and smart pencils for that
+                    matter memorize their basic
+                    multiplication facts from 1 times 1 all
+                    the way up to 9 times 9 some people even
+                    like to memorize all the way through the
+                    12 how am I gonna do that Marco the same
+                    way you get to Carnegie Hall kid
+                    practice huh never mind
+                    one easy way to memorize your
+                    multiplication facts is with a beat
+                    you can also practice skip counting
+                    whatever you do practice makes perfect
+                    [Applause]
+                    [Music]
+                    I want to show you a trick that you can
+                    use to help you learn multiplying by
+                    nine but can you give me a hand no you
+                    don't seem to have any at the moment
+                    actually I need two hands to multiply
+                    any number by nine look at your ten
+                    fingers palms facing you your fingers
+                    are numbered this way count from the
+                    left until you reach the number you want
+                    to multiply by line and Bend down that
+                    finger count the fingers to the left of
+                    the Bands finger for the number that
+                    goes in the tens place the fingers to
+                    the right of the bent finger give you
+                    the number in the ones place for example
+                    to calculate three times nine
+                    bend down the third finger there are two
+                    fingers to the left of the bend and
+                    seven fingers to the right so the answer
+                    is 27 to find the answer to four times
+                    nine bend down the fourth finger there
+                    are three fingers to the left of the
+                    bend and six fingers to the right 4
+                    times 9 is 36 Wow
+                    I love that trick it only works when
+                    multiplying by the nines but you must
+                    admit it's pretty handy
+                    [Applause]
+                    [Music]
+                    hey Marco can you show me some more
+                    tricks no please okey-dokey
+                    actually this one is so easy it's a
+                    little embarrassing it's a trick for
+                    multiplying by ten to multiply any
+                    number by ten simply write it down and
+                    then presto add a zero at the end you
+                    see four times 10 equals 40 and 65 times
+                    10 equals 650 and 372 times 10 equals
+                    3,000 720 I wish there was some way for
+                    me to see all the facts I need to learn
+                    you know all at once your wish is my
+                    command watch and be amazed as I turn
+                    this ordinary picnic table into my times
+                    table awesome we can find the product of
+                    any two factors by looking at this table
+                    6 times 8 equals 48 7 multiplied by 9 is
+                    63
+                    let me try Marco 8 times 4 is 32 I hope
+                    you've had a good time learning about
+                    multiplication with me I sure have Marco
+                    now it's time for me to go practice my
+                    times tables that's a great idea
+                    you might even want to time yourself
+                    practice performing with rock and learn
+                    multiplication programs and you're sure
+                    to get it right
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Different websites for courses</li>
+                    <li>Rock 'N Learn -Youtube Video</li>
+                    <li>www.weareteachers.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1"
+                            aria-disabled="true">Previous</a>
+                    </li>
+
+                    <li class="page-item"><a class="page-link" href="{{url_for('mult')}}">1</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('div')}}">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('div')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

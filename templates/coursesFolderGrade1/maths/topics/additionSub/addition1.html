@@ -1,0 +1,220 @@
+{% extends "base_page.html" %} 
+{%block title%} addition {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Addition</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Mathematics</p>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Addition</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(5, 2.8, 'grade_1');" href="{{url_for('additionnl')}}">Addition using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(6, 2.8, 'grade_1');" href="{{url_for('additionwp')}}">Addition using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(7, 2.8, 'grade_1');" href="{{url_for('additionn')}}">Addition sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(8, 2.8, 'grade_1');" href="{{url_for('addition12')}}">Add a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(9, 2.8, 'grade_1');" href="{{url_for('addition22')}}">Add a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Subtraction</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(10, 2.8, 'grade_1');" href="{{url_for('subnl')}}">Subtraction using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(11, 2.8, 'grade_1');" href="{{url_for('subwp')}}">Subtraction using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(12, 2.8, 'grade_1');" href="{{url_for('subswp')}}">Subtraction sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(13, 2.8, 'grade_1');" href="{{url_for('sub12')}}">Subtract a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(14, 2.8, 'grade_1');" href="{{url_for('sub22')}}">Subtract a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2 class="effect-underline">Addition using a number line</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/1TSSZ3wUOPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <p>Counting on number line is the playful method through which the child is learning addition of numbers.
+                Ask math, explains you the addition of numbers using colorful number line that makes the children more interested.
+                Addition means plus. The sign of addition is + . Addition of the numbers on number line this method is used only for small numbers. For smaller grades the number line starts with zero. Number line is the line which starts from zero and has numbers 1,2,3 … on it at equal distances.
+                 It is used in addition,subtraction and multiplication because you can jump from one number to another number.</p>
+            <h5>Steps for addition on number line</h5>
+            <ul>
+                <li>Draw a number line.</li>
+                <li>According to the question, from zero jump the first number.</li>
+                <li> Mark the first number.</li>
+                <li>From the first number jump second number.</li>
+                <li> Mark it. That gives you the answer.</li>
+            </ul>
+            <h5>Example</h5>
+            <ul>
+                <li>Draw a number line. Say up to 15.</li>
+                <li>From zero jump to 5. Mark it.</li>
+                <li> From 5 jump 7 number. Mark it .</li>
+                <li>So the answer of 5 + 7 = 12 .</li>
+            </ul>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    when we use a number line we jump
+                    forward for addition
+                    we make one jump for every count
+                    let's give it a try
+                    eight plus three first find the largest
+                    number in the problem the reason we
+                    start with a larger number
+                    you see we have to do fewer jumps a
+                    larger number is eight start with eight
+                    and do three jumps forward so eight plus
+                    three equals 11 well done nine plus
+                    seven the larger number is nine can you
+                    find it on the number line awesome
+                    the upper number tells us how many jumps
+                    we need to make that's right we need to
+                    make seven jumps on the number line fine
+                    plus seven so nine and seven jumps
+                    equals 16 well done
+                    I know this doesn't seem right can you
+                    see what Peters made the mistake that's
+                    right he skipped a number when counting
+                    every time we count one he only makes
+                    one jump the answer is actually nine
+                    now it's your turn have a go at solving
+                    addition using a number line see you
+                    soon
+                    you
+                    
+                    </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>BuzzWithBee -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>www.ask-math.com</li>
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('additionnl')}}">1</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('additionwp')}}">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('additionwp')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

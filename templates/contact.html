@@ -1,0 +1,70 @@
+{% extends "base_page.html" %}
+{% block tiitle %} contact {% endblock %}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{% block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/contact.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/textDecoration/textDecor.css')}}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+{%endblock head%}
+
+{% block content %}
+
+<center><form method="POST" action={{ url_for("contact")}} onsubmit="return checkForm(this)">
+<div class="container">
+	<div class="row">
+        <h1><a class="effect-underline" style="text-decoration: none; color: black;">Contact Us</a></h1>
+	</div>
+	<div class="row">
+			<h4 style="text-align:center">We'd love to hear from you!</h4>
+	</div>
+	<div class="row input-container">
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<input id="name" type="text" name="name" required />
+					<label>Name</label> 
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<input id="email" type="text" name="email" required />
+					<label>Email</label> 
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input" style="float:right;">
+					<input id="phone" type="text" name="phone" required />
+					<label>Phone Number</label> 
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<input id="grade" type="text" name="grade" required />
+					<label>Enter grade : prek or gradek or 1st</label> 
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<textarea id="message" name="message" required></textarea>
+					<label>Message</label>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<button type="submit" class="btn btn-secondary">Send Message</button> 
+			</div>
+	</div>
+</div>
+</form></center>
+
+{% endblock content %}
+
+{%block scripts%}
+<script>
+    function checkForm(form){
+        alert("Successfully received your message.Thank You for your valuable feedback!!!")
+    }
+</script>
+{%endblock scripts%}

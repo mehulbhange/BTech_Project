@@ -1,0 +1,89 @@
+{% extends "base_page.html" %}
+{%block title%} Home {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/cardCss.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/classCss.css')}}">
+  
+
+
+{%endblock head%}
+
+
+
+{%block content %}
+
+
+<div class="container" align="center">
+            
+        
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+    <div class="col mb-4">
+      <div class="card">
+        <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Start Learning</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut provident corrupti ut voluptas quia delectus, commodi amet autem cumque? Exercitationem minima ratione ipsa totam vero voluptas nam modi beatae et!</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Play Games</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, harum? Saepe ullam asperiores doloremque magnam maxime cumque quos autem labore explicabo quidem omnis incidunt, iste ad adipisci dolorem sequi deserunt!</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Quizes</h5>
+          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia numquam non ipsa! Possimus eum tenetur obcaecati vel deleniti ratione labore ipsam dolore est temporibus mollitia vitae, nam, delectus architecto aliquam.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Drawing</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non, veritatis assumenda vero, ullam voluptas beatae eveniet minus omnis alias velit doloribus, earum qui similique tenetur numquam ipsum sequi doloremque.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+    
+</div>
+
+
+
+{%endblock content%}
+
+{%block scripts%}
+
+
+<script type="text/javascript" src="{{url_for('static',filename='js/navJs.js')}}">
+</script>
+<script type="text/javascript" src="{{url_for('static',filename='js/index.js')}}">
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+
+{%endblock scripts%}

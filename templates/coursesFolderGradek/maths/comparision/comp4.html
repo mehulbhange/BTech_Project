@@ -1,0 +1,169 @@
+{% extends "base_page.html" %}
+{%block title%} maths {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Comparision</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Maths</p>     
+                <li>
+                    <a onclick="return onClickOpen(10, 2.86, 'grade_k');" href="{{url_for('comp1')}}">Comparision-1</a>
+                </li>
+                <li>
+                    <a onclick="return onClickOpen(11, 2.86, 'grade_k');" href="{{url_for('comp2')}}">Comparision-2</a>
+                </li>
+                <li>
+                    <a onclick="return onClickOpen(12, 2.86, 'grade_k');" href="{{url_for('comp3')}}">Comparision-3</a>
+                </li>    
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2> Comparision</h2>
+            <h3>Comparision - Comparing Two Numbers</h3>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+                <iframe width="100%" height="330    " src="https://www.youtube.com/embed/61bJuxoE8x8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            <h3>Parent should follow below points and explain to your child:</h3>
+            <!-- <h4>Parent should teach kids simply giving following examples:</h4> -->
+            <h5>Giant Dice</h5>
+            <p>This is a game played with a small group of children. The group is divided into two teams. Each team has
+                a giant game die. One child on each team tosses their dice and says the amount. The group decides which
+                die has the most dots.</p>
+            <h5>Game Cards</h5>
+            <p>Regular playing cards can be used for this game or they can be made with stickers or stamps. Children
+                play this game with one partner. Each child should have a set of cards that represent numbers 1-10, and
+                each child’s cards should be different in some way (e.g. a different color or different picture). To
+                play the game, each child takes the first card from their stack and places it on the table. The children
+                determine which card has the most or same amount. The child whose card has the most wins that round and
+                gets to keep both cards. If the cards are the same, they tie and each child keeps their own card. I have
+                the children place the cards they win in a plastic basket so they won’t get mixed up with their other
+                cards. At the end, the children can count to see how many cards they won, but my students seem to enjoy
+                the game more if we don’t determine who won or lost at the end.</p>
+            <h5>Block Building Game</h5>
+            <p>Children roll a game die, determine the amount, and count out that many wooden cubes to stack into a
+                tower. The die is rolled again to make a second tower. The children compare the towers to see which has
+                the most, least, or same amount.</p>
+            <h5>Bean Toss</h5>
+            <p>Spray paint lima beans with two colors so that they have one color on each side. Place ten beans in a
+                cup. Children dump the beans onto a mat (I used a sheet of craft foam for the mat). They count each
+                color to see how many beans landed on the red side and how many landed on the blue side. They compare to
+                see which colors have the most, least, or same amount.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Not Available
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>TeachMe
+                        -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>www.theprintableprincess.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('comp2')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('comp3')}}">3</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('comp4')}}">4</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('comp4')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

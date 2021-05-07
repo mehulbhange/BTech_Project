@@ -1,0 +1,203 @@
+{% extends "base_page.html" %}
+{%block title%} verb {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>English</h3>
+        </div>
+
+        <p>Parts of Speech</p>
+        <ul class="list-unstyled components">
+            <li>
+                <a onclick="return onClickOpen(20, 2.8, 'grade_1');" href="{{url_for('noun')}}">Noun</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(21, 2.8, 'grade_1');" href="{{url_for('pronoun')}}">Pronoun</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(22, 2.8, 'grade_1');" href="{{url_for('adjective')}}">Adjective</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(23, 2.8, 'grade_1');" href="{{url_for('verb')}}">Verb</a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Verb</h2>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/DzmmSbLwOGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <h5>What is Adjective?</h5>
+            <p>Verbs are words that show actions, motions, doing, or states of being. They can also demonstrate how someone feels. Verbs are an absolutely necessary part of sentences. A sentence cannot work without an action verb.</p>
+            
+            <h6>Examples of verb used in Sentences</h6>
+            <p>John <b>went</b> to the zoo yesterday.</p>
+            <p>   The dog <b>ran</b> down the street.</p>
+            <p>Ben <b>opened</b> the refrigerator to get the lemonade. </p>
+            <p>The child accidentally <b>cut</b> his finger on the scissors.</p>
+
+            <p>You can figure out and locate the verbs in a sentence by asking, 
+                “what did this person or thing do?” In the first sentence, you can see that John is our subject. 
+                If we ask, “What did John do,” then we can see that he went somewhere, specifically the zoo. The sentences above show actions that the person, object, or animal is doing. Action verbs are all the things you can do with your body, like jump, skip, hop, run, smell, 
+                swim, swing, leap, sit, look, hear, whistle, talk, climb, crawl, cry, scream, yell, laugh, hug, poke, kick, etc.</p>
+            
+            
+            
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    what is a verb
+                    a verb is a word that tells an action
+                    a verb tells what we do
+                    jump run play
+                    those are all verbs
+                    he sits in the grass the word sits is a
+                    word that tells an
+                    action sits is a verb
+                    i jump in the air the word jump is a
+                    word that tells an action
+                    jump is a verb
+                    i run outside
+                    the word run is a word that tells an
+                    action
+                    run is a verb
+                    she reads a book the word reads is a
+                    word that tells an
+                    action reads is a verb
+                    the kids play in the sand the word play
+                    is a word that tells an action play
+                    is a verb
+                    they eat ice cream the word
+                    eat is a word that tells an action
+                    eat is a verb
+                    the boy sleeps in his bed
+                    the word sleeps is a word that tells an
+                    action sleeps is a verb
+                    you can find verbs in sentences let's
+                    read the sentence below
+                    the dog choose a bone
+                    the word choose is a verb
+                    can you find the verb
+                    we run up the hill
+                    the word run is a verb
+                    he climbs the steps
+                    the word climbs is a verb
+                    we swim in the pool
+                    the word swim is a verb
+                    see if you can find verbs in the
+                    sentences you read
+            
+        </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Different websites for courses</li>
+                    <li> 
+                        Inspired by Kinder-Youtube Video</li>
+                    <li>kidskonnect.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('adjective')}}" tabindex="-1"
+                            aria-disabled="true">Previous</a>
+                    </li>
+
+                    <li class="page-item"><a class="page-link" href="{{url_for('verb')}}">4</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('noun')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

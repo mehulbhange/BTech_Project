@@ -1,0 +1,272 @@
+{% extends "base_page.html" %}
+{%block title%} adjective {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>English</h3>
+        </div>
+
+        <p>Parts of Speech</p>
+        <ul class="list-unstyled components">
+            <li>
+                <a onclick="return onClickOpen(20, 2.8, 'grade_1');" href="{{url_for('noun')}}">Noun</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(21, 2.8, 'grade_1');" href="{{url_for('pronoun')}}">Pronoun</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(22, 2.8, 'grade_1');" href="{{url_for('adjective')}}">Adjective</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(23, 2.8, 'grade_1');" href="{{url_for('verb')}}">Verb</a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Adjective</h2>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/1ic1SVf_AvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <h5>What is Adjective?</h5>
+            <p>Adjectives are words that are used to help describe or give description to people, places, and things. 
+                These descriptive words can help give information about size, shape, age, color, origin, material, purpose,
+                 feelings, condition, and personality, or texture. Think about how you would describe your mother, teacher, best friend, cat, dog, bedroom, or favorite piece of clothing.</p>
+            
+            <h6>Examples of Pronoun used in Sentences</h6>
+            <p> That mother is <b>nice</b>.</p>
+            <p>   This bedroom is <b>big</b>.</p>
+            <p><b>Her favorite</b> shirt is <b>red</b>. </p>
+            <p> <b>Our best</b> friend is <b>fun</b> and <b>loud.</b></p>
+            
+            
+            
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    hello everyone
+                    in this video we will learn what are
+                    describing words
+                    or adjectives but before that
+                    you must know what are naming words
+                    or nouns
+                    [Music]
+                    in the video of naming words we have
+                    already learnt that naming words or
+                    nouns are names of persons
+                    places animals or things
+                    so now that we are aware of nouns
+                    adjectives will be easier to understand
+                    [Music]
+                    adjectives describe nouns
+                    in other words we can say that
+                    describing words or adjectives as we
+                    call them
+                    tell us more about nouns
+                    for example
+                    [Music]
+                    smart teacher
+                    the word smart describes the noun
+                    teacher which is a person
+                    [Music]
+                    big house
+                    [Music]
+                    the word big describes the noun house
+                    which is a place
+                    [Music]
+                    green parrot
+                    [Music]
+                    the word green describes the color of
+                    the noun
+                    parrot which is an animal
+                    [Music]
+                    round ball
+                    [Music]
+                    the word round describes the noun
+                    ball which is a thing
+                    [Music]
+                    two mangoes
+                    the word two describes the noun
+                    mangoes
+                    so smart big green
+                    round and two are all adjectives
+                    or describing words which are telling us
+                    more about their respective nouns
+                    [Music]
+                    we can say that adjectives are words
+                    which describe about the quality
+                    size color
+                    shape and number of a noun
+                    [Music]
+                    adjectives or describing words
+                    also tell about how someone
+                    or something looks
+                    smells sounds
+                    tastes and feels
+                    for example
+                    [Music]
+                    pretty girl the word pretty
+                    describes the looks of the noun girl
+                    fragrant rose
+                    the word fragrant describes the smell
+                    of the noun rose
+                    [Music]
+                    pandering clouds
+                    the word thundering describes the sound
+                    of the noun
+                    [Music]
+                    clouds
+                    sweet juice the word
+                    sweet describes the taste of the noun
+                    juice
+                    [Music]
+                    soft toy the word soft
+                    describes the feel of the noun toy
+                    now it is your turn see the pictures
+                    and see whether you can use describing
+                    words for them
+                    [Music]
+                    this is a picture of a mother
+                    describe it as you would describe your
+                    mother
+                    think of her qualities and looks and you
+                    can try
+                    [Music]
+                    can we say beautiful
+                    yes
+                    [Music]
+                    loving yes of course
+                    [Music]
+                    caring
+                    [Music]
+                    intelligent very good
+                    [Music]
+                    here's another picture of a watermelon
+                    this time
+                    imagine yourself holding and eating it
+                    and then try using few describing words
+                    for it
+                    is it big
+                    yes ripe
+                    perfect
+                    green yes that's the color of the
+                    watermelon
+                    and juicy good job
+                    [Music]
+                    wasn't learning adjectives fun
+                    that's all for this time thank you so
+                    much for watching
+                    
+        </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Different websites for courses</li>
+                    <li> 
+                        Bhavna Keswani -Youtube Video</li>
+                    <li>kidskonnect.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('pronoun')}}" tabindex="-1"
+                            aria-disabled="true">Previous</a>
+                    </li>
+
+                    <li class="page-item"><a class="page-link" href="{{url_for('adjective')}}">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('verb')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

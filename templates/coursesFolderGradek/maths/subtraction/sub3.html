@@ -1,0 +1,163 @@
+{% extends "base_page.html" %}
+{%block title%} maths {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Subtractions</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Maths</p>
+            <li>
+                <a onclick="return onClickOpen(16, 2.86, 'grade_k');" href="{{url_for('sub1')}}">Subtraction-1</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(17, 2.86, 'grade_k');" href="{{url_for('sub2')}}">Subtractions-2</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(18, 2.86, 'grade_k');" href="{{url_for('sub3')}}">Subtractions-3</a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2> Addition</h2>
+            <h3>Subtractions - Part 3</h3>
+            <h4>Homework Part</h4>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/M6sDpu72Bbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            <!-- <h4>Parent should teach kids simply giving following examples:</h4> -->
+            
+            <p>Try to solve as many subtraction problems as possible. Only practing makes you perfect in subtraction.</p>
+            <p>Use drawing board to solve subtraction problems.</p>
+            <p>Solve subtraction problems apart from this given problems. Parents should give different subtraction problems to their kid.</p>
+            
+            <h3>Parent should read below points and explain to your child:</h3>
+            <h5> SUBTRACTION BOWLING:</h5>
+            <p>To play subtraction bowling, simply set up 10 plastic party cups or toilet paper tubes in the shape of bowling pins. Stagger them in rows, 4 in the back row, then 3, 2, and 1 “bowling pin” in the front. Use a small ball to go bowling.
+                Students will take turns rolling the ball to see how many bowling pins they knock over. Each student will write the subtraction problem on whiteboards and read the subtraction sentence aloud. For example, if one student knocks down 5 bowling pins, all students will write 10-5=5. This activity works great if played in an open area of your classroom or even in the hallway. </p>
+            <h5>ACT IT OUT</h5>
+            <p>To play, line students up in a ten-frame shape. You can even use painters tape to make a giant ten-frame. Start by making the outside perimeter, then do a long strip down the middle and smaller strips to make the 10 sections.
+                Have students take turns standing in the spaces to represent 10 counters. Read a subtraction story problem aloud and have students act the problem out, using themselves as counters in the ten-frame. Have them all say the subtraction sentence aloud. You can also have them write it on a white board.</p>
+            <h5>ROLL AND RACE</h5>
+            <p>Students will roll a dice and match the number to the column on their game board. They’ll solve the first available problem, either coloring in or covering the space with a manipulative when they’ve solved it correctly. Students can play independently or with a partner to race to see who can fill a column up first. </p>
+            <h5>COOKIE FLIP</h5>
+            <p>To play, place 10 cookies on a cookie sheet. Students will roll the dice, flipping that number of cookies over with a flat spatula to model the subtraction problem. They can write the equation on a whiteboard for extra practice. If playing in partners, students will take turns rolling, flipping, and solving. </p>
+ 
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Not Available
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li> 
+                        Smile and Learn - English                        
+                        -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>www.theprintableprincess.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item ">
+                        <a class="page-link" href="{{url_for('sub2')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('sub3')}}">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('sub1')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

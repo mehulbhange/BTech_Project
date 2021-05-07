@@ -1,0 +1,257 @@
+{% extends "base_page.html" %} 
+{%block title%} subtraction {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Subtraction</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Mathematics</p>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Addition</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(5, 2.8, 'grade_1');" href="{{url_for('additionnl')}}">Addition using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(6, 2.8, 'grade_1');" href="{{url_for('additionwp')}}">Addition using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(7, 2.8, 'grade_1');" href="{{url_for('additionn')}}">Addition sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(8, 2.8, 'grade_1');" href="{{url_for('addition12')}}">Add a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(9, 2.8, 'grade_1');" href="{{url_for('addition22')}}">Add a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Subtraction</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(10, 2.8, 'grade_1');" href="{{url_for('subnl')}}">Subtraction using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(11, 2.8, 'grade_1');" href="{{url_for('subwp')}}">Subtraction using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(12, 2.8, 'grade_1');" href="{{url_for('subswp')}}">Subtraction sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(13, 2.8, 'grade_1');" href="{{url_for('sub12')}}">Subtract a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(14, 2.8, 'grade_1');" href="{{url_for('sub22')}}">Subtract a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2 class="effect-underline">Subtract a two-digit number to a two-digit number</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/sBJp_Toqlhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <p>This topic will help student to get better understanding of subtraction of two digit number with two digit.
+                This topic will build a strong base for future topics.</p>
+            <p>Apart from the examples taken in the video lecture parents should give some other examples in order to
+                train your kids.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Hey look at the sports shop there are so
+                    many sport items available here let's
+                    learn to subtract two-digit numbers with
+                    regrouping here with these sport
+                    items look PETA is here to buy some
+                    hockey sticks there are 61 hockey sticks
+                    with the shopkeeper mr. Wilson beat a
+                    bot 12 hockey sticks
+                    how many hockey sticks are left with mr.
+                    Wilson
+                    let's group the hockey sticks into tens
+                    and ones and then subtract to get the
+                    answer
+                    sixty-one hockey sticks mean six tens
+                    and one one hockey sticks and twelve
+                    hockey sticks mean one ten and two ones
+                    hockey sticks now we first subtract the
+                    ones and then the tens now we cannot
+                    take away two sticks from one stick so
+                    we regroup six tens to five cans and ten
+                    ones now we add these ten ones to the
+                    one one we had to get eleven ones so we
+                    now have five ten and eleven ones we now
+                    take away two ones from the 11 ones and
+                    110 from the five tens let's count the
+                    remaining ones and tens we have four
+                    tens and nine ones which is equal to 49
+                    thus there are 49 hockey sticks left
+                    with mr. Wilson now as you know instead
+                    of counting the hockey sticks we can
+                    directly subtract the numbers 61 and 12
+                    let's look at the process of subtraction
+                    of these numbers step one write two
+                    numbers according to their place values
+                    step 2 subtract the 1 as 1 is less than
+                    2
+                    we cannot subtract 2 from 1 so we
+                    regroup the 6 tens to five tens plus 10
+                    ones right 5 in the tens column add 10
+                    plus one to get 11 ones right 11 in the
+                    ones column now subtract 11 minus two to
+                    get nine ones right 9 in the ones column
+                    step 3 subtract the tens here we
+                    subtract five minus one to get four tens
+                    now write four in the tens column so we
+                    got the answer as 49 61 minus 12 is
+                    equal to 49
+                    thus there are 49 hockey sticks left
+                    with mr. Wilson look Anna has come to
+                    buy some tennis balls there are 54
+                    tennis balls unbought 19 tennis balls
+                    how many tennis balls are left with mr.
+                    Wilson we have to subtract 19 from 54 to
+                    get the answer first we write the
+                    numbers as per their place values as we
+                    cannot subtract 9 from 4 we regroup the
+                    5 tens so we get 5 10 equal to 4 tens
+                    plus 10 ones right four in the tens
+                    column add 10 plus 4 to get 14 ones we
+                    write 14 in the ones column subtract 14
+                    minus 9 equal to five ones write five in
+                    the ones column now subtract four minus
+                    one equal to three tens write 3 in the
+                    tens column so we get the answer 35:54
+                    minus 19 is equal to 35
+                    thus there are 35 tennis balls left with
+                    mr. Wilson who's here
+                    this is sudden I lose friend he has come
+                    to buy some back there are 24 backs with
+                    mr. Wilson
+                    Tyrone bought 17 back how many bats are
+                    left to find the answer first
+                    let's regroup two tens as 4 is less than
+                    7 so we get 2 10 is equal to 1 10 plus
+                    10 ones add 10 plus 4 which is equal to
+                    14 ones subtract 14 minus 7 is equal to
+                    7 ones now subtract 1 minus 1 equal to 0
+                    tens so we get the answer as 7 24 minus
+                    17 is equal to 7
+                    thus there are seven bats left
+                    hope you had fun learning at the sports                  
+                          
+                    </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Periwinkle-Youtube Video</li>
+                    <li>Different websites for courses</li>
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('sub12')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('sub22')}}">10</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('additionnl')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

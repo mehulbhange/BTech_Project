@@ -1,0 +1,92 @@
+{% extends "base_page.html"%}
+{% block title%}Register{%endblock title%}
+
+{%block content%}
+    <div class="container"  style="margin-top: 5%;">
+      <p style="color: red; margin-top: 20px;" centered>
+        {{message}}
+      </p>
+
+        <form class="row g-3" method="POST" action={{ url_for("register")}} onsubmit="return checkForm(this)">
+            <div class="col-md-5">
+              <label for="inputUsername" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="col-md-5">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail" name="inputEmail" required>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            
+              <div class="col-md-3">
+                <label for="inputFname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="fname" name="fname" required>
+              </div> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+              <div class="col-md-3">
+                <label for="inputMname" class="form-label">Middle Name</label>
+                <input type="text" class="form-control" id="mname" name="mname" required>
+              </div>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+              <div class="col-md-3">
+                <label for="inputLname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lname" name="lname" required>
+              </div>
+            
+
+            <div class="col-md-5">
+              <label for="inputPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword" name="inputPassword" required> 
+            </div>
+            
+            <div class="col-md-5">
+              <label for="inputPassword1" class="form-label"> Retype Password</label>
+              <input type="password" class="form-control" id="retypedPassword" name="retypedPassword" required>
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity" name="inputCity" required> 
+            </div>
+            
+            <div class="col-md-4">
+              <label for="inputeDOB" class="form-label">Birth Date</label>
+              <input type="date" class="form-control" name="inputDOB" required>
+            </div>
+            <div class="col-md-2">
+              <label for="inputeDOB" class="form-label">Class</label>
+              <select class="form-select" name="class_name" aria-label="Select Class">
+                <option value="pre_k"selected>Pre-K</option>
+                <option value="grade_k">Grade K</option>
+                <option value="grade_1">Grade 1</option>
+                <option value="grade_2">Grade 2</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="checkbox">
+                <label class="form-check-label" for="gridCheck">
+                  Sign In
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </form>
+    </div>
+
+{%endblock content%}
+
+<script type="text/javascript">
+
+  function checkForm(form){
+    re = /^\w+$&$!@*-/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    }
+  }
+
+</script>

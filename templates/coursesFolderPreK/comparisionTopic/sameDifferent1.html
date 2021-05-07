@@ -1,0 +1,223 @@
+{% extends "base_page.html" %}
+{%block title%} math {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Comparison</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Mathematics</p>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">More and
+                    Less</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(21, 2.8, 'pre_k');" href="{{url_for('femo1')}}">More and Less- Part 1</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(22, 2.8, 'pre_k');" href="{{url_for('femo2')}}">More and Less- Part 2</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(23, 2.8, 'pre_k');" href="{{url_for('femo3')}}">More and Less- Part 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Same or
+                    Different</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(24, 2.8, 'pre_k');" href="{{url_for('sd1')}}">Same or Different- Part 1</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(25, 2.8, 'pre_k');" href="{{url_for('sd2')}}">Same or Different- Part 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(26, 2.8, 'pre_k');" href="{{url_for('bigsmall')}}">Big and Small</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(27, 2.8, 'pre_k');" href="{{url_for('longshort')}}">Long and Short</a>
+            </li>
+            <li>
+                <a href="{{url_for('solveQuiz')}}">How to solve quiz</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Learn- Comparision</h2>
+            <h4>Topic - Same or Different: Part-1    </h4>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/oqzWr5ILxDM?start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <h3>Parent should follow below points while teaching same or different:</h3>
+            <h4>Parent should teach kids simply giving following examples:</h4>
+            <h5>Pencil Pairs</h5>
+            <p>In the game, ‘Pencil Pairs’, each learner is given a pencil.  Next, they walk around the room to find the pencil that matches theirs.  To extend the activity, they find a pencil that has only one thing that is the same.</p>
+            <h5>Math Notebook</h5>
+            <p>A Math Notebook is a great way to reduce the amount of papers used in your classroom. 
+                It also allows learners to review these concepts throughout the year.Learners CREATE their own pencils that are the same and different with this interactive math notebook page.  Simply color and glue to the math notebook.</p>
+            <h5>Find the Difference Math Center</h5>
+            <p>One way for learners to practice finding the difference is with this simple, yet engaging center. Have learners place a manipulative on the picture that is different…super simple!  Your learners can complete a printable activity as well!</p>
+            
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    hello boys and girls today we'll compare
+                    objects to see if they are the same or
+                    different our friend Eddie the elephant
+                    will help us hey guys everybody enjoys
+                    playing with balloons do you like them
+                    too of course I'm very good at blowing
+                    them up Wow you can do it really well
+                    look guys here are two balloons they are
+                    both yellow and the same size we can say
+                    they are the same yes these balloons are
+                    exactly the same
+                    oh let's have a close look at it it's
+                    the same size as the two other balloons
+                    but it looks different the first two
+                    balloons are yellow and this one is red
+                    it differs in color
+                    I have other two these are two stars how
+                    beautiful they are
+                    they are both blue and the same size we
+                    can say that these stars are the same
+                    I'll blow up one more star
+                    it looks very much like the two other
+                    stars but it's also different if the two
+                    other stars are blue and this one is
+                    pink it's the same shape and size but
+                    it's a different color I'll have to make
+                    a choice this is a mother duck with her
+                    ducklings are they all exactly the same
+                    take your time
+                    look carefully
+                    tell us what you've noticed they are all
+                    ducks that's what they have in common
+                    but the mother duck is bigger than the
+                    ducklings right you are this duck is
+                    different in size
+                    it's bigger all our balloons got blown
+                    away it's time to finish this lesson in
+                    our next episode we'll be looking for
+                    objects that fit together subscribe to
+                    our channel to stay updated on new
+                    videos find links to our apps in the
+                    comments below
+                    
+                    
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Bodhguru -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>https://www.mrsjonescreationstation.com/different-sorting-activities/</li>
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('femo2')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('sd1')}}">4</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('sd2')}}">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('sd2')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

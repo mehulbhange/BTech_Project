@@ -1,0 +1,280 @@
+{% extends "base_page.html" %}
+{%block title%} math {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Introduction to Alphabates</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>English</p>
+
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                    class="dropdown-toggle">Learn-Alphabates</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(8, 2.8, 'pre_k');" href="{{url_for('eng1')}}">Part-1</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(9, 2.8, 'pre_k');" href="{{url_for('eng2')}}">Part-2</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{url_for('equiz')}}">How to solve quiz</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Learn- Introduction to Alphabates- N to Z</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/KBPAI6qLW5o?start=512&end=1150"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- </video> -->
+            <h3>Parent should follow below points:</h3>
+            <!-- <h4>Parent should teach kids simply giving following examples:</h4> -->
+
+            <p>Learning the alphabet should begin early in a child's life.Start simple. Do not attempt to teach all 26 letters at once. Simply concentrate on a few letters at a time and allow your child to see, hear, and experience that letter in a variety of ways. Remember that children learn by utilizing their senses so while alphabet books can be a helpful learning tool you should utilize a number of approaches to teach the ABCs.</p>
+            <p>Buy or make letters that children can experience in 3-D and let the child construct letters as well using play dough. Alphabet coloring pages and crafts can also help reinforce your child's knowledge of letters.</p>
+            <p>The alphabet is the building block of literacy and so children must learn to recognize and name the letters, both in and out of order, and the sounds associated with each letter.</p>
+
+            <p>After watching this video please go to drawing section and try to write alphabates which you have studied.</p>
+            
+            
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    n is for nest needle necklace nurse o is
+                    for owl orange ostrich octopus
+                    P is for parrot piano pig pencils q q is
+                    for quail Queen quill quilt
+                    r is for rabbit rainbow rose rat S is
+                    for Swan son spider snake
+                    t is for tiger truck telephone train U
+                    is for uniform unicorn uncle umbrella V
+                    is for a violent vegetables vulture then
+                    W is for watch whale wheel wall X is for
+                    xmas x-ray xylophone Xerox y is for yak
+                    yo-yo yogurt yacht
+                    z
+                    is for zebra sue zigzag zip
+                    right big ABC
+                    a
+                    be
+                    see
+                    d
+                    II
+                    f
+                    gee
+                    H
+                    I
+                    J
+                    kay
+                    I'll
+                    and
+                    and
+                    Oh
+                    P
+                    q
+                    are
+                    s
+                    tea
+                    you
+                    Vee
+                    w
+                    X
+                    why
+                    see right small ABC
+                    a
+                    be
+                    see
+                    d
+                    II
+                    ass
+                    gee
+                    eight
+                    I
+                    J
+                    kay
+                    Elle
+                    and
+                    and
+                    Oh
+                    P
+                    q
+                    are
+                    s
+                    tea
+                    you
+                    viii
+                    w
+                    X
+                    why
+                    see
+                    abcdefg hijk LMNOP QRS TUV wxy and z now
+                    I know my ABC's next time won't you sing
+                    with me
+                    hello everyone you're just in time to
+                    march with the animal alphabet march in
+                    line with the animal alphabet it's as
+                    easy as ABC
+                    a is for and always in the hurry B is
+                    for bear whose roar makes the scurry
+                    c is for crab who lives by the sea
+                    D is for donkey as strong as can be
+                    silent everyone march in line with the
+                    animal alphabet it's as easy as ABC e is
+                    for elephant with long long nose f is
+                    for frog see how he croaks G is for goat
+                    who eats grass and flowers
+                    H is for herring he lives in the Babur's
+                    no flying very high please march in line
+                    with animal alphabet it's as easy as ABC
+                    is for iguana not frightening is P J is
+                    for jackal as cunning as can be
+                    k is for QE o cannot fly L is for line
+                    whose rules they all live by hello mr.
+                    lion you can take it easy sir march in
+                    line with the animal alphabet it's as
+                    easy as ABC M is for Mouse tiny and
+                    small and it's for nightingales we
+                    destroy off the mow over all E&L who
+                    hoots at night be for penguin who swims
+                    with all his might is it too cold march
+                    in line with
+                    animal alphabet it's as easy as ABC Q
+                    for quail penis in the ground are for
+                    rabbit who jumps around s for snake who
+                    riddles about T for thought the slowest
+                    without a doubt hurry up please thank
+                    you March in line with the animal
+                    alphabet it's as easy as ABC U for
+                    umbrella bird who flies with the high
+                    head we for vulture who feeds on the
+                    dead W for Walrus loose limbs out alone
+                    explore x-ray fish you can't see his
+                    bones we are almost there we have just
+                    two left March in line with the animal
+                    as event it's as easy as ABC Y for yolk
+                    with silky hair but bite B for zebra
+                    with black and white stripes
+                    alphabet train
+                    it's now time to say goodbye
+                    and go home goodbye
+                    you
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li> Sasu Fun Easy Learning -Youtube Video</li>
+                    <li>Different websites for courses</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('eng1')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('eng2')}}">2</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('solvequiz')}}">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('solvequiz')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

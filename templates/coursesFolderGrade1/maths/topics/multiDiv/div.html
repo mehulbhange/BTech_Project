@@ -1,0 +1,337 @@
+{% extends "base_page.html" %}
+{%block title%} multiplication {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Mathematics</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Maths</p>
+            <li>
+                <a onclick="return onClickOpen(16, 2.8, 'grade_1');" href="{{url_for('mult')}}">Multiplication</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(17, 2.8, 'grade_1');" href="{{url_for('div')}}">Division</a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Division</h2>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330    " src="https://www.youtube.com/embed/rGMecZ_aERo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <h5>Division Activities:</h5>
+            <h6>Introduce division as sharing:</h6>
+            <p>When it comes down to it, isn’t division really just sharing? Play this simple game where kids roll dice and share out pom-pom cherries as equally as possible. It’s a great start to teaching division.</p>
+            <h6>Continue teaching division by reading a book or two:</h6>
+            <p>Kids are never too old for storytime. These clever books are the perfect jumping-off point for teaching division, especially if you have kids use counters like pom-poms to act out the story  as you go.</p>
+            <h6>Make division anchor charts to support learning:</h6>
+            <p>Keep anchor charts handy while you’re teaching division to give kid an easy reference when they struggle. </p>
+            <h6>Practice division facts with Wrap-Ups</h6>
+            <p>This division game is a fun alternative to flashcards. Kids wrap yarn around the cards from the problem on the left to the answer on the right. Then they flip over the card to see if they’re right.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    today we are going to learn about
+                    division aha you're gonna learn how to
+                    divide and it's gonna be so cool you're
+                    gonna be like what division is so much
+                    fun but first we want to hear from you
+                    ten year old Sienna from Las Vegas
+                    watched our pronoun video and said I
+                    love the video on pronouns thank you so
+                    much you are very welcome we're so glad
+                    you enjoyed it mrs. Gutierrez his second
+                    grade class from Riverside California
+                    watched our fractions video and said
+                    thank you for helping us with fractions
+                    not a problem
+                    aren't fractions awesome and finally
+                    six-year-old Brent from Ohio had a joke
+                    for us and said why couldn't the farmer
+                    sleep because the cows were saying oh
+                    yeah that would keep you up that was so
+                    cool be sure and watch this video to the
+                    end to learn how you two could be
+                    featured on one of our videos well as we
+                    mentioned earlier today we are going to
+                    learn about division division is such an
+                    awesome thing to be able to do and
+                    you're gonna have it all figured out
+                    you're gonna learn how to divide in this
+                    video and we're gonna start off with a
+                    story there's this kid named Ethan and
+                    Ethan loves carrots he loves carrots so
+                    much he loves to snack on him he loves
+                    when he gets to eat them their crunchy
+                    their tasty yeah carrots are awesome in
+                    fact I'm literally eating a carrot right
+                    now as I'm speaking carrots are great
+                    for your skin
+                    carrots are great for your eyes are
+                    amazing your great snack and Ethan loves
+                    them
+                    well Ethan has two friends over Kevin
+                    and Chloe and they start to get hungry
+                    of course they all love carrots because
+                    carrots are like the perfect snack now
+                    in Ethan's house there are only three
+                    carrots they're just three carrots we
+                    are going to have to divide the three
+                    carrots amongst the three kids so let's
+                    figure this out how many carrots does
+                    each kid get do you know ah huh each kid
+                    gets one carrot pretty simple right
+                    three carrots three kids each kid gets
+                    one carrot hey did you know we just did
+                    division aha we just did division
+                    division is pretty simple you see
+                    division is splitting a number up by any
+                    given number that's it just splitting a
+                    number up let's look at our story again
+                    there were three carrots and we divided
+                    those three carrots by 3 because there
+                    are three people right the three kids
+                    that love carrots and the answer of how
+                    many carrots each kid gets is 1 3
+                    divided by 3 equals 1 notice right here
+                    is the division sign this is what it
+                    looks like when you see that sign you
+                    could just save divided by so this reads
+                    3 divided by 3 equals 1 let's try
+                    another example of division let's say
+                    there are 8 presence a presence and
+                    there are 4 women and we want each of
+                    the women to get the same amount of
+                    presence as the other women because we
+                    want it to be fair
+                    notice the division sign we are going to
+                    divide or split up eight by four
+                    remember to divide us to split up let's
+                    split these presents up into four equal
+                    groups one two three four all right how
+                    many presents does each woman get ah huh
+                    two each woman gets two presents isn't
+                    that cool
+                    division is so much fun and it's so easy
+                    remember division is splitting a number
+                    up by any given number that's it all
+                    right now it's time for division facts
+                    we're going to learn some pretty
+                    interesting facts about division and
+                    you're gonna be like oh like secrets
+                    this is super cool okay so just look
+                    around all right make sure it's clear
+                    aren't you it's time for division facts
+                    [Music]
+                    the first fact is this
+                    you can never divide by zero
+                    it's true you can never divide by zero
+                    even if you're a rule-breaker and you're
+                    like I'm gonna do whatever I like
+                    you still can never divide by zero
+                    in fact if a teacher ever gives you a
+                    test and you see a problem where you
+                    have to divide a number by zero just
+                    right on the test undefined because
+                    that's exactly what that answer would be
+                    undefined it's impossible kind of like
+                    mr. whiskers math skills doesn't mr.
+                    whiskers do math in his head all day
+                    long who knows his math skills are
+                    undefined we just don't know it's
+                    impossible to know you know mr. whiskers
+                    might know how to do division who knows
+                    undefined you can't divide by zero you
+                    can never divide by zero
+                    if you ever see any division problem
+                    dividing by zero just right undefined
+                    it's impossible it's impossible so just
+                    write undefined the second fact is this
+                    you can write the division sign three
+                    ways uh-huh
+                    not just with that traditional division
+                    sign you can write it like the division
+                    sign or you can write a division problem
+                    with the slash or with a horizontal line
+                    [Music]
+                    for example look at this 12 divided by 3
+                    equals 4 that's the original division
+                    sign the one that you might see more
+                    regularly but here is the same equation
+                    written in a different way 12 divided by
+                    3 equals 4 it's still a division sign
+                    but it's a slash it means the same thing
+                    as the original division sign remember
+                    the division sign can also be a
+                    horizontal line 12 divided by 3 equals 4
+                    that looks like a fraction doesn't it
+                    the line in a fraction means divided by
+                    these are the three ways that you can
+                    write the division sign pretty
+                    interesting all right
+                    the final fact is this
+                    okay this is so awesome
+                    you can flip the number of groups and
+                    the number in each group and the
+                    division problem stays true for example
+                    ten divided by two equals five and you
+                    can flip the two and the five and it
+                    stays true that means ten divided by
+                    five equals 2 in that interesting
+                    10 divided by 2 equals 5 and 10 divided
+                    by 5 equals 2 you can flip the number of
+                    groups and the number in each group and
+                    it still stays true or look at this 18
+                    divided by 6 equals 3 remember we can
+                    flip the number of groups and the number
+                    in each group and it still stays true so
+                    we could switch the 6 and the 3 and it
+                    stays true so 18 divided by 3 equals 6
+                    the 6 and the 3 can be flipped so 18
+                    divided by 6 equals 3 and 18 divided by
+                    3 equals 6 pretty nifty
+                    those were some cool facts you know
+                    division is a great time division is
+                    splitting a number up by any given
+                    number it's a lot of fun and we hope you
+                    learned a whole lot in this video
+                    [Music]
+                    hey thanks for watching homeschool pop
+                    yeah I love carrots you know I don't
+                    have any friends over today and there's
+                    still three carrots left and so 3
+                    divided by 1/4 just me means that I get
+                    that there
+                    garrets I love carrots so you made it to
+                    the end of the video you are awesome
+                    remember the kids comment we promised
+                    you we would share how you two could be
+                    featured on one of our videos with the
+                    help of an adult leave your first name
+                    age and where you are from along with a
+                    comment you can share a joke a silly
+                    message or just share how much you love
+                    us if you are watching this as a class
+                    you can leave a comment to just share
+                    your teacher's name your grade and where
+                    you are from for a chance to be featured
+                    on one of our videos we hope to hear
+                    from you soon the screen to subscribe or
+                    are you to watch these two videos see a
+                    Vale
+                    
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>Different websites for courses</li>
+                    <li> Homeschool Pop -Youtube Video</li>
+                    <li>www.weareteachers.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item ">
+                        <a class="page-link" href="{{url_for('mult')}}" tabindex="-1"
+                            aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('div')}}">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('mult')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

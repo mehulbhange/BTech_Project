@@ -1,0 +1,50 @@
+{% extends "base_page.html" %}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesCss.css')}}">
+{%endblock head%}
+
+
+
+{%block content %}
+
+<div class="container-fluid">
+
+    <div class="container" align="center" >
+
+        <ul class="list-group" style="width:500px; margin-top: 50px;margin-bottom: 50px;">
+            <li class="list-group-item">
+                <a href="{{url_for('pre_k_maths_quiz_list')}}" style="font-size:xx-large;color: #000;text-decoration: none;">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.freepik.com%2Ffree-vector%2Fnumbers-and-maths-symbols_1308-4630.jpg&f=1&nofb=1" alt="" width="150px">
+                    <br> Maths
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="{{url_for('pre_k_english_quiz_list')}}" style="font-size:xx-large;color: #000;text-decoration: none;">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FXbyZsHHbgII%2Fmaxresdefault.jpg&f=1&nofb=1" alt="" width="150px">
+                    <br> English
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="{{url_for('pre_k_gk_quiz_list')}}" style="font-size:xx-large;color: #000;text-decoration: none;">
+                    <img src="{{url_for('static',filename='images/gkFront.png')}}" alt="" width="150px">
+                    <br> General Knowledge
+                </a>
+            </li>
+            
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+{%endblock content%}
+
+{%block scripts%}
+{%endblock scripts%}

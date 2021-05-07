@@ -1,0 +1,98 @@
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/gamecss/additiongame.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/textDecoration/textDecor.css')}}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+  $("#start").hide();
+  $("#game").hide();
+  $("#endresult").hide();
+  $("#first,#second,#answer").hide();
+  var three = 3;
+  var right = 0;
+  var wrong = 0;
+  var countis = 60;
+  countdown = setInterval(function(){
+    three--;
+    $(".count").text(three);
+    if(three<0){
+      clearInterval(countdown);
+      $(".count").css("animation","none");
+      $("#countdown").hide();}
+  },1000);
+  game();
+   $("#go").click(function(){
+  });//go !
+  function game(){
+    var answer = $("#useranswer").val();
+    var ans = parseInt(answer);
+    var number1 = Math.floor(Math.random()*10);
+    var number2 = Math.floor(Math.random()*10);
+    var result = number1 - number2;
+    $("#first").text(number1);
+    $("#second").text(number2);
+    $("#answer").text(result);
+    $("#need").text(number1+" - "+number2)
+  };//game();
+  setTimeout(function(){
+    $("#game").show();
+    countup = setInterval(function(){
+    countis-=1;
+    $("#countis").text(countis+":00");
+    if(countis<=0){
+     $(".endresult").html("Total Tries :"+(right+wrong)+"<br>Right: "+right+"<br>Wrong :"+wrong+"<br>right quota: "+(Math.floor((right*100)/(right+wrong)))+"%")
+      clearInterval(countup);
+      $("#countis").text("00:00");
+      $("#html").hide();
+      $("#endresult").show();
+    }
+  },1000);
+  },4100);
+  $('#useranswer').keypress(function (e) {
+  if (e.which == 13) {
+     var numb1 = $("#first").text();
+    var numb2 = $("#second").text();
+    var numb3 = $("#useranswer").val();
+    var n1 = parseInt(numb1);
+    var n2 = parseInt(numb2);
+    var n3 = parseInt(numb3);
+    var n4 = n1 - n2;
+     if(n3==n4){
+       right++;
+     }
+     else{
+       wrong++;
+     }
+      game();
+    $(this).val("");
+  }//if
+});//keypress
+});
+</script>
+{%endblock head%}
+
+{%block content %}
+<div id="html">
+    <div id="counttill"><span id="countis"></span></div>
+    <div id="menu">
+      <button id="mainmenu" class="menu" onclick="window.location.href='choosegame'">&#10096; Go back</button>
+      <button id="start" class="menu left">Start &#9654;</button>
+    </div>
+    <div id="countdown">
+      <span class="count">3</span>
+    </div>
+    <div id="game">
+      <span id="need"></span><br>
+      <span id="first"></span><span id="second"></span><br /><span id="answer"></span>
+      <input id="useranswer" type="text" maxlength="3" onclick="value=''">
+    </div>
+  </div>
+  <div id="endresult">
+    <span class="endresult"></span>
+  
+  </div>
+{%endblock content%}
+
+{%block scripts%}
+{%endblock scripts%}

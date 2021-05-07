@@ -1,0 +1,128 @@
+{% extends "base_page.html" %}
+{%block title%} Grade_K English Quiz {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/quiz/quizListCss1.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/quiz/quizListCss2.css')}}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script type="text/javascript">
+     
+      function openAlphabetsQuiz(){
+          window.open('grade_k_alphabets_quiz1','_blank');
+      }
+      
+      function openConsonantsVowelsQuiz(){
+          window.open('grade_k_consonants_vowels_revision_quiz1','_blank');
+      }
+      
+      function openShortwordsQuiz(){
+          window.open('grade_k_shortwords_quiz1','_blank');
+      }
+      
+      function openShortSentenceQuiz(){
+          window.open('grade_k_short_sentence_quiz1','_blank');
+      }
+    
+      function openOppositeWordQuiz(){
+          window.open('grade_k_oppositewords_quiz1','_blank');
+      }
+  
+  
+  </script>
+
+
+{%endblock head%}
+
+{%block content %}
+<br>
+<h3 align="center"> Grade-K English Quiz</h3>
+<div class="container">
+    <div id="accordion" class="accordion">
+        <div class="card mb-0">
+            <div class="card-header collapsed grabbing" style="background-color: rgb(207, 206, 206);" data-toggle="collapse"
+                href="#collapseOne">
+                <a class="card-title effect-shine" style="color: rgb(0, 0, 0);">
+                    <bold>Alphabets Revision</bold>
+                </a>
+            </div>
+            <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                <a href="" class="btn btn-dark effect-shine" onclick="openAlphabetsQuiz()"> Quiz 1</a> <br> <br>
+                <a href="" class="btn btn-dark effect-shine"> Quiz 2</a>
+            </div>
+            <br>
+            <div class="card-header collapsed grabbing " style="background-color: rgb(207, 206, 206);" data-toggle="collapse"
+                data-parent="#accordion" href="#collapseTwo">
+                <a class="card-title effect-shine" style="color: rgb(0, 0, 0);">
+                    <bold>Revision of Consonants and Vowels</bold>
+                </a>
+            </div>
+            <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                
+                <a href="" class="btn btn-dark effect-shine" onclick="openConsonantsVowelsQuiz()"> Quiz 1</a> <br> <br>
+                <a href="" class="btn btn-dark effect-shine"> Quiz 2</a>
+            </div>
+
+            <br>
+            <div class="card-header collapsed grabbing" style="background-color:rgb(207, 206, 206);" data-toggle="collapse"
+                href="#collapse5">
+                <a class="card-title effect-shine" style="color: rgb(0, 0, 0);">
+                    <bold>Short Words</bold>
+                </a>
+            </div>
+            <div id="collapse5" class="card-body collapse" data-parent="#accordion">
+                
+                <a href="" class="btn btn-dark effect-shine" onclick="openShortwordsQuiz()"> Quiz 1</a> <br> <br>
+                <a href="" class="btn btn-dark effect-shine"> Quiz 2</a>
+            </div>
+
+            <br>
+            <div class="card-header collapsed grabbing" style="background-color: rgb(207, 206, 206);" data-toggle="collapse"
+                href="#collapse6">
+                <a class="card-title effect-shine" style="color: rgb(0, 0, 0);">
+                    <bold>Short Sentence Framing</bold>
+                </a>
+            </div>
+            <div id="collapse6" class="card-body collapse" data-parent="#accordion">
+                
+                <a href="" class="btn btn-dark effect-shine" onclick="openShortSentenceQuiz()"> Quiz 1</a> <br> <br>
+                <a href="" class="btn btn-dark effect-shine"> Quiz 2</a>
+            </div>
+
+            <br>
+            <div class="card-header collapsed grabbing" style="background-color: rgb(207, 206, 206);" data-toggle="collapse"
+                href="#collapse7">
+                <a class="card-title effect-shine" style="color: rgb(0, 0, 0);">
+                    <bold>Opposite Words and Jumbled Words</bold>
+                </a>
+            </div>
+            <div id="collapse7" class="card-body collapse" data-parent="#accordion">
+                
+                <a href="" class="btn btn-dark effect-shine" onclick="openOppositeWordQuiz()"> Quiz 1</a> <br> <br>
+                <a href="" class="btn btn-dark effect-shine"> Quiz 2</a>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock content%}
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+{%endblock scripts%}

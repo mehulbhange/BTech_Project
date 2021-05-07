@@ -1,0 +1,169 @@
+{% extends "base_page.html" %}
+{% block tiitle %} about {% endblock %}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+
+{% block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/about.css')}}">
+<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+{%endblock head%}
+
+{% block content %}
+
+<ul class="ca-menu">
+    <li>
+        <a href="#">
+            <div class="ca-content"></div>
+            <h2 class="ca-main">Autodidact</h2>
+            <h3 class="ca-sub">Self Learning</h3>
+    </li>
+</ul>
+
+<div id="infobox">
+    <p class="line1"> Website is designed by Autodidact Team </p>
+
+
+    <table>
+        <tr>
+            <td> <img class="sunnypic" alt="" src="{{url_for('static',filename='images/profiles/karan.jpg')}}"> </td>
+            <td> <img class="rahulpic" alt="" src="{{url_for('static',filename='images/profiles/mehul.jfif')}}"> </td>
+            <td> <img class="karanpic" alt="" src="{{url_for('static',filename='images/profiles/rushi.jpg')}}"> </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="sunnyinfo"> Karan Gavali, <br> CSE Engineer, <br> Programmer, <br>Web Designing, <br /> </td>
+            <td class="rahulinfo"> <br>Mehul Bhange, <br>
+                CSE Engineer  <br>Web developer,<br> Programmer <br /></td>
+            <td class="karaninfo"> <br>Rushikesh Gurav, <br>
+                CSE Engineer <br> Web developer<br>Programmer<br /></td>
+        </tr>
+    </table>
+
+    <div id="karansociallinks">
+        <a href="https://www.linkedin.com/in/karan-gavali-1430781a7/" target="_blank"><img src="http://www.rahulsharma.us/images/fblogo.png" width="48"
+                height="48" alt="" /></a>
+        <a href="#"><img src="http://www.rahulsharma.us/images/googleplusogo.png" width="48" height="48" alt="" /></a>
+        <a href="https://github.com/kdg20"><img src="http://www.rahulsharma.us/images/codepenlogo.png" width="48"
+                height="48" alt="" /></a>
+    </div>
+
+    <div id="sunnysociallinks">
+        <a href="https://www.linkedin.com/in/mehulbhange/" target="_blank"><img src="http://www.rahulsharma.us/images/fblogo.png" width="48"
+                height="48" alt="" /></a>
+        <a href="#"><img src="http://www.rahulsharma.us/images/googleplusogo.png" width="48" height="48" alt="" /></a>
+        <a href="https://codepen.io/sunny1234/"><img src="http://www.rahulsharma.us/images/codepenlogo.png" width="48"
+                height="48" alt="" /></a>
+    </div>
+
+
+    <div id="rahulsociallinks">
+        <a href="#" target="_blank"><img src="http://www.rahulsharma.us/images/fblogo.png" width="48"
+                height="48" alt="" /></a>
+        <a href="#"><img src="http://www.rahulsharma.us/images/googleplusogo.png" width="48" height="48" alt="" /></a>
+        <a href="https://codepen.io/sharmarahul/"><img src="http://www.rahulsharma.us/images/codepenlogo.png" width="48"
+                height="48" alt="" /></a>
+    </div>
+
+
+    <p class="bottomtitle"> Under the Guidence of  <b> Prof. Uma Gurav </b> </p>
+    <table>
+        <tr>
+            <td> <img class="umapic" alt="" src="http://www.rahulsharma.us/images/sunny.jpg"> </td>
+        </tr>
+
+    <table>
+        <tr>
+            <td class="umamaminfo"> Uma Gurav, <br> KIT Professor, <br> CSE Dept, <br>Web Designing,Data Analytics <br /> </td>
+        </tr>
+    </table>
+
+
+    <div id="acecoderssociallinks">
+        <a href="#"><img src="http://www.rahulsharma.us/images/fblogo.png" width="48"
+                height="48" alt="" /></a>
+        <a href="#"><img src="http://www.rahulsharma.us/images/googleplusogo.png" width="48" height="48" alt="" /></a>
+        <a href="#"><img src="http://www.rahulsharma.us/images/youtubelogo.png" width="48" height="48" alt="" /></a>
+    </div>
+</div>
+
+<div id="footer">
+
+
+    <table class="release">
+        <tr>
+            <th class="head">Recent release</th>
+
+        </tr>
+        <tr>
+            <td><b>-</b> - <br> -</td>
+        </tr>
+
+        <tr>
+            <td><b>-</b> -</td>
+        </tr>
+    </table>
+
+
+
+    <table class="footermenu">
+        <tr>
+            <th class="head"> Menu</th>
+
+        </tr>
+        <tr>
+            <td>Home</td>
+        </tr>
+
+        <tr>
+            <td>Features</td>
+        </tr>
+
+        <tr>
+            <td>Downloads</td>
+        </tr>
+
+        <tr>
+            <td>Donate us</td>
+        </tr>
+
+        <tr>
+            <td>Support</td>
+        </tr>
+
+        <tr>
+            <td>About us</td>
+        </tr>
+    </table>
+
+
+    <div class="footersocaillinks">
+        <h5 class="head">Follow Us</h5>
+        <a class="footerfblogo" href="#"> <img src="http://www.rahulsharma.us/images/fblogo.png" </a>
+
+            <a class="footergooglepluslogo" href="#"> <img src="http://www.rahulsharma.us/images/googleplusogo.png" </a>
+                <a class="footertwitterlogo" href="#"> <img src="http://www.rahulsharma.us/images/twitterlogo.png" </a>
+                    <a class="footeryoutubelogo" href="#"> <img src="http://www.rahulsharma.us/images/youtubelogo.png"
+                            </a>
+    </div>
+
+    <div id="contactus">
+        <p class="contactheading1">Like what you see? </p>
+        <p class="contactheading2"> Let's us Rock the web for you.
+        </p>
+
+        <div class="contactusbutton"> Contact us </div>
+        <hr>
+        <p class="createdby"> © Created & Designed by Autodidact Team</p>
+        <p class="forhackinux"> Designed for Kids</p>
+    </div>
+    {% endblock content %}
+
+    {%block scripts%}
+
+    {%endblock scripts%}

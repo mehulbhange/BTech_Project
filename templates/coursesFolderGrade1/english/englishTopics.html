@@ -1,0 +1,124 @@
+{% extends "base_page.html" %}
+{%block title%} topicSelection {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/courseSelection/coursesinfoPrek.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/textDecoration/textDecor.css')}}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{%endblock head%}
+
+{%block content %}
+<br>
+<div class="container">
+    <div id="accordion" class="accordion">
+        <div class="card mb-0">
+            <div class="card-header collapsed grabbing" style="background-color: black;" data-toggle="collapse"
+                href="#collapseOne">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>Words and Sentences</bold>
+                </a>
+            </div>
+            <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                <p>This topic will give better understanding of words and sentences to kids.</p>
+                <!-- <button type="button" class="btn btn-outline-primary" onclick="location.href='">Start Learning</button> -->
+                <!-- <a href="{{url_for('chooseMath')}}" class="mt-auto btn btn-primary effect-shine ">Start Learning</a> -->
+                <a href="{{url_for('words')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+            
+            <br>
+
+            <div class="card-header collapsed grabbing" style="background-color: black;" data-toggle="collapse"
+            href="#collapse5">
+            <a class="card-title effect-shine" style="color: blanchedalmond;">
+                <bold>Part of speech</bold>
+            </a>
+        </div>
+        <div id="collapse5" class="card-body collapse" data-parent="#accordion">
+            <p> Parts of Speech are essential to proper grammar.</p> 
+            <p>The parts of speech are important because they show us how the words relate to each other.</p>
+            <p>Kid will learn following parts of speech:</p>
+            <ul>
+                <li>Noun </li>
+                <li>Pronoun</li>
+                <li>Adjective</li>
+                <li>Verb</li>
+            </ul>
+            <a href="{{url_for('noun')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+        </div>
+
+
+
+            <br>
+            <div class="card-header collapsed grabbing " style="background-color: black;" data-toggle="collapse"
+                data-parent="#accordion" href="#collapseTwo">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>Alphabetical order</bold>
+                </a>
+            </div>
+            <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                <p>Alphabetizing is an important skill to master. It helps develop organizational skills, executive functioning abilities and it even improves memory.</p>
+                <p>Kid will learn:
+                    <ul>
+                        <li> Put the letters in ABC order</li>
+                        <li>Put the words in ABC orders</li>
+                    </ul>
+                </p>
+                
+                <a href="{{url_for('alphaletters')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+
+
+            <br>
+            <div class="card-header collapsed grabbing" style="background-color: black;" data-toggle="collapse"
+                href="#collapse6">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>English writing exercise</bold>
+                </a>
+            </div>
+            <div id="collapse6" class="card-body collapse" data-parent="#accordion">
+                <p>Their listening skills influence their ability to learn to both read and write and it greatly influences their social skills as well. Hearing sounds and words helps children learn to talk and understand
+                </p>
+                <ul>
+                    <li>Spelling and Writing sight words</li>
+                    <li>Writing sentences </li>
+                    <li>Writing short & simple paragraphs</li>
+                </ul>
+                <a href="{{url_for('writingwords')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+
+            <br>
+            <div class="card-header collapsed grabbing" style="background-color: black;" data-toggle="collapse"
+                href="#collapse7">
+                <a class="card-title effect-shine" style="color: blanchedalmond;">
+                    <bold>Literacy skills</bold>
+                </a>
+            </div>
+            <div id="collapse7" class="card-body collapse" data-parent="#accordion">
+                <p>Literacy is essential to developing a strong sense of well-being and citizenship. Children who have developed strong reading skills perform better in school and have a healthier self-image.
+                </p>
+                <a href="{{url_for('literacyskills')}}" class="btn btn-dark effect-shine"> Start Learning</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{%endblock content%}
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+{%endblock scripts%}

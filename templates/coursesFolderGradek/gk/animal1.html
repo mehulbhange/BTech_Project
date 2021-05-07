@@ -1,0 +1,164 @@
+{% extends "base_page.html" %}
+{%block title%} maths {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>General Knowledge</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>GK</p>
+            <li>
+                <a onclick="return onClickOpen(31, 2.86, 'grade_k');" href="{{url_for('anm1')}}">Animals- 1</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(32, 2.86, 'grade_k');" href="{{url_for('anm2')}}">Animals-2</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(33, 2.86, 'grade_k');" href="{{url_for('fish')}}">fish</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(34, 2.86, 'grade_k');" href="{{url_for('plants')}}">Plants</a>
+            </li>
+            <li>
+                <a onclick="return onClickOpen(35, 2.86, 'grade_k');" href="{{url_for('country')}}">My Country</a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2> Animals</h2>
+            <h3>Vertebrate Animals - Introduction</h3>
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/eRV8lBJqs5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+            <h3>Parent should read below points and explain to your child:</h3>
+            <!-- <h4>Parent should teach kids simply giving following examples:</h4> -->
+            <h5> Animal Races</h5>
+            <p> This is a good way to teach the structure "like a / an". After teaching animal vocab and practicing moving like each animal, line the students up ready for a race. The teacher starts each race with "Ready? Run like (an elephant)!" And the students try to win the race. Other ideas: jump like a kangaroo, crawl like a panther, swim like a fish, fly like a bird, walk like a chicken, etc.</p>
+            <h5>Blindfold Guess</h5>
+            <p> Blindfold a student and give him/her an object to feel. The student must guess what the object is. This works well with plastic animals as they are a little challenging to guess</p>
+            <h5>Dog & Cat Chase</h5>
+            <p>Have students sit in a circle.  The teacher walks around the outside of the circle patting the students on the head saying "dog" each time.  Suddenly, teacher says "cat" as s/he touches a student's head and then that student must chase the teacher around the circle.  The teacher must try to sit in the student's spot before being tagged by the chasing student.  If the teacher is tagged s/he must touch the heads again.  If the teacher makes it back without being touched then the chasing student walks around the circle touching heads.  This can be done with any variation of pair words (e.g. big & small, happy & sad, can, can't, etc.).</p>
+            <h5>Don't Drop It! </h5>
+            <p>This is a great vocab practice game for animal vocab. Have all students sit in a circle. Use a ball (or even a plastic animal) and toss it to one student. But you must say one animal word as you pass. The student then throws to another student and says a different animal word. If the student you threw it to drops it, he/she is out. Also, if the student can't think of an animal word within a few seconds he/she is out. The game keeps going until you have one winner.</p>
+            <h5>Hint Animal Game</h5>
+            <p>As a review of animals flashcards, the eacher holds some cards without showing any to the students.  Then the teacher tells the kids that they are going to receive 3 hints, so they need to listen carefully. For example: 1. I am yellow. 2. I have long hair. 3. I am strong. Who am I? Well, a lion of course!  You can make it in different levels depending on how much English you use or which vocab you use.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Not Available
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li> 
+                        Smile and Learn - English                        
+                        -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>www.eslkidstuff.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('anm1')}}">1</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('anm2')}}">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('anm2')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

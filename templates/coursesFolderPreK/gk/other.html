@@ -1,0 +1,176 @@
+{% extends "base_page.html" %}
+{%block title%} gk {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Basics of General Knowledge</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>General Knowledge</p>
+
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Basics of
+                    GK</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="{{url_for('humanparts')}}">Human Body-Part 1</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('humanparts2')}}">Human Body-Part 2</a>
+                    </li>
+                </ul>
+            <li>
+                <a href="{{url_for('other')}}">other</a>
+            </li>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2>Learn- Some other general Knowledge questions and their answers</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/2FAws-_ErGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <h3>Parent should read below points and explain it to child:</h3>
+            <!-- <h4>Parent should teach kids simply giving following examples:</h4> -->
+            <p>Watch the above video carefully and try to remember.</p>
+            <h5>Parents should teach their child gk everyday just follow below points:</h5>
+
+            <h6>Play:</h6>
+            <p>Learning through play is the most effective form of learning especially in preschoolers. Learning combined with fun makes it easier for children to remember as well as recall. It helps children become creative and improves their problem-solving skills. </p>
+
+            <h6>Newspapers:</h6>
+            <p>While your preschooler may be too young to read the newspaper all by himself/herself, he/she is not too young to listen. Get in the habit of reading the newspaper aloud in front of your children.</p>
+
+            <h6>Nature:</h6>
+            <p>Teaching with nature is a brilliant way to teach children as they can see for themselves how nature is. For example, you can visit a garden with your children and teach them about various plants and how leaves change colours according to season etc. They will not remember it all, but they will certainly understand.  And that is what matters.</p>
+
+
+            <h6>Label Things:</h6>
+            <p> If you want your child to learn basic things in the house like a chair or table or sugar or tea, then make temporary labels and stick it to the things. Ensure that the labels are of the same size and have a basic easy font which makes it possible for children to read it.</p>
+
+            <h6>Reading:</h6>
+            <p> Although this may seem like a common and not so exciting way, it is actually the opposite. Reading is the best way to encourage learning. Let children pick a book of their choice and let them read. Not only will reading improve their general knowledge, but their vocabulary will also expand and they will develop a life-long love for reading.</p>
+
+
+
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    Not available
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li> T-Series Kids Hut
+                        -Youtube Video</li>
+                    <li>Different websites for courses</li>
+                    <li>www.shantijuniors.com</li>
+
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('humanparts2')}}" tabindex="-1"
+                            aria-disabled="true">Previous</a>
+                    </li>
+     
+                    <li class="page-item"><a class="page-link" href="{{url_for('other')}}">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('humanparts')}}">Next</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}

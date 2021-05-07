@@ -1,0 +1,294 @@
+{% extends "base_page.html" %} 
+{%block title%} subtraction {%endblock%}
+
+{%block username%} {{username}} {%endblock%}
+
+{%block name%} {{name}} {%endblock%}
+
+{%block head%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/coursesInfoCss/coursesCss/introNumbers.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+{%endblock head%}
+
+{%block content %}
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Subtraction</h3>
+        </div>
+
+
+        <ul class="list-unstyled components">
+            <p>Mathematics</p>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Addition</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(5, 2.8, 'grade_1');" href="{{url_for('additionnl')}}">Addition using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(6, 2.8, 'grade_1');" href="{{url_for('additionwp')}}">Addition using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(7, 2.8, 'grade_1');" href="{{url_for('additionn')}}">Addition sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(8, 2.8, 'grade_1');" href="{{url_for('addition12')}}">Add a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(9, 2.8, 'grade_1');" href="{{url_for('addition22')}}">Add a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Subtraction</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a onclick="return onClickOpen(10, 2.8, 'grade_1');" href="{{url_for('subnl')}}">Subtraction using a number line</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(11, 2.8, 'grade_1');" href="{{url_for('subwp')}}">Subtraction using word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(12, 2.8, 'grade_1');" href="{{url_for('subswp')}}">Subtraction sentences for word problems</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(13, 2.8, 'grade_1');" href="{{url_for('sub12')}}">Subtract a one-digit number to a two-digit number</a>
+                    </li>
+                    <li>
+                        <a onclick="return onClickOpen(14, 2.8, 'grade_1');" href="{{url_for('sub22')}}">Subtract a two-digit number to a two-digit number</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="{{url_for('dashboard')}}" style="text-decoration: none;" class="download">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-justify"></i> <span></span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </nav>
+
+
+        <div class="content-wrapper">
+            <h2 class="effect-underline">Subtract a one-digit number to a two-digit number</h2>
+
+            <!-- <video width="320" height="240" controls autoplay> -->
+            <!-- <source src="https://youtu.be/vxffHm4wy24" type=video/mp4> -->
+            <iframe width="100%" height="330" src="https://www.youtube.com/embed/jsnZ4CP67mw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- </video> -->
+            <h4>Kid should watch this lesson carefully and parents should teach below points to their child</h4>
+            <p>This topic will help student to get better understanding of subtraction of two digit number with one digit.
+                This topic will build a strong base for future topics.</p>
+            <p>Apart from the examples taken in the video lecture parents should give some other examples in order to
+                train your kids.</p>
+            <div class="line"></div>
+
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">This Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Video Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile"></div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    hello students
+                    welcome to our channel learning notebook
+                    in today's video
+                    we will do part two of chapter
+                    subtraction
+                    in this part two we will learn how to
+                    subtract
+                    one digit number from a two digit number
+                    question is tina has 24 crayons
+                    she gave five crayons to her friend
+                    how many crayons were left with tina
+                    students
+                    since we have to find out crayons left
+                    with tina
+                    so we have to subtract in this question
+                    so let's find 24 minus
+                    5 first subtract the digits
+                    at one's place so subtract 5 from
+                    4 but 5 cannot be subtracted from 4
+                    so we need to regroup students
+                    to understand regrouping let me tell you
+                    a story here 4
+                    is weaker than 5 so 4
+                    takes the help of its neighbor 2
+                    2 is powerful and kind-hearted
+                    and thus gives one of its power to
+                    4 therefore 2 becomes 1
+                    and 4 becomes 14 students
+                    now we can easily subtract 5 from
+                    14 14 minus 5 equals to
+                    9 now
+                    let's subtract the digits at tens place
+                    which is only 1 so our answer is
+                    19 therefore 19
+                    crayons were left with tina
+                    [Music]
+                    now next question is there were 45
+                    chillies on a plant
+                    eight chillies fell how many chillies
+                    are left
+                    on the plant since we have to find
+                    chilies
+                    left on the plant so we will subtract
+                    so let's find 45 minus eight
+                    first subtract digits at one's place so
+                    subtract
+                    8 from 5 but 8 cannot be subtracted from
+                    5
+                    as 5 is weaker than 8 so 5
+                    takes the help of its neighbor 4 4
+                    is powerful and kind hearted so it gives
+                    1 of x power to 5 therefore
+                    4 becomes 3 and 5 becomes
+                    15 now we can easily subtract
+                    8 from 15 15 minus 8
+                    equals to 7 now students
+                    subtract digit at tens place which is
+                    only
+                    3 so answer is 37
+                    therefore 37 chilies are left
+                    on the plant
+                    [Music]
+                    now next question is tanya is
+                    9 years old her grandmother is 72 years
+                    old
+                    how many years older is tanya's
+                    grandmother
+                    than tanya so students here
+                    we have to subtract and find 72
+                    minus 9 first
+                    subtract digits at once place
+                    so subtract 9 from 2
+                    but 9 cannot be subtracted from 2
+                    as 2 is weaker than 9 so 2
+                    takes the help of its neighbor 7
+                    7 is powerful and kind hearted so it
+                    gives
+                    1 of its power 2 2
+                    therefore 7 becomes 6
+                    and 2 becomes 12 now we can
+                    easily subtract 9 from 12
+                    12 minus 9 equals to 3
+                    now subtract digit at tens place
+                    which is only 6 so answer is
+                    63 therefore tanya's grandmother
+                    is 63 years older than tanya
+                    last question is there are 36 rose
+                    bushes in the park
+                    seven bushes have red doses how many
+                    bushes
+                    do not have red roses so here we have to
+                    subtract
+                    and find 36 minus 7
+                    first subtract digits at one's place
+                    so subtract 7 from 6 but 7
+                    cannot be subtracted from 6 so 6
+                    takes the help of its neighbor 3 3 gives
+                    one of its power to 6 therefore
+                    3 becomes 2 and
+                    6 becomes 16 now we can
+                    easily subtract 7 from 16
+                    16 minus 7 equals to 9
+                    now subtract they detect tens place
+                    which is only 2 so answer this
+                    29 therefore
+                    29 bushes do not have red
+                    roses so students in this video
+                    we learnt how to subtract one digit from
+                    two digit number
+                    and how to regroup while subtracting
+                    thanks for watching if you enjoyed this
+                    video then do hit the like button
+                    don't forget to subscribe to our channel
+                    learning notebook
+                    and make sure to press the bell icon
+                    thank you bye bye see in the next video                            
+                          
+                    </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <li>
+                        Learning Notebook -Youtube Video</li>
+                    <li>Different websites for courses</li>
+
+
+                </div>
+            </div>
+
+            <!-- tab nav end -->
+
+            <!-- page navigation bar -->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('subswp')}}" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('sub12')}}">9</a></li>
+                    <li class="page-item"><a class="page-link" href="{{url_for('sub22')}}">10</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{url_for('sub22')}}">Next</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!-- page navigation bar ends-->
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock content%}
+
+
+{%block scripts%}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on('click', function () {
+            $("#sidebar").toggleClass('active');
+        })
+    })
+</script>
+{%endblock scripts%}
